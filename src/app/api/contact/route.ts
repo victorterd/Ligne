@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TO_EMAIL = "Bouhabibfelix@gmail.com";
+const TO_EMAIL = "bouhabibfelix@gmail.com";
 const FROM_EMAIL = "Ligne Verticale <onboarding@resend.dev>";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
