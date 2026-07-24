@@ -75,12 +75,16 @@ export default function ProjectsShowcase({
   }, []);
 
   const scrollToIndex = (index: number) => {
+    const track = trackRef.current;
     const card = cardRefs.current[index];
-    card?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    if (!track || !card) return;
+
+    const trackRect = track.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const delta =
+      cardRect.left + cardRect.width / 2 - (trackRect.left + trackRect.width / 2);
+
+    track.scrollTo({ left: track.scrollLeft + delta, behavior: "smooth" });
   };
 
   useEffect(() => {
