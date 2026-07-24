@@ -212,6 +212,10 @@
       }
     }
   },
+  "cookieConsent": {
+    "message": "Folosim cookie-uri pentru a-ți îmbunătăți experiența pe acest site.",
+    "accept": "Am înțeles"
+  },
   "contactPage": {
     "eyebrow": "Contact",
     "heading": "Hai să vorbim despre proiectul tău.",

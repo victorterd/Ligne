@@ -212,6 +212,10 @@
       }
     }
   },
+  "cookieConsent": {
+    "message": "We use cookies to improve your experience on this site.",
+    "accept": "Got it"
+  },
   "contactPage": {
     "eyebrow": "Contact",
     "heading": "Let's talk about your project.",

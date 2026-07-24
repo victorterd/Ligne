@@ -2,6 +2,7 @@ import { Inter, Fraunces } from "next/font/google";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { locales, hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import "../globals.css";
@@ -44,6 +45,7 @@ export default async function RootLayout({
         <Navbar locale={locale} dict={dict.nav} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
+        <CookieConsent dict={dict.cookieConsent} />
       </body>
     </html>
   );
