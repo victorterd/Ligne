@@ -15,6 +15,18 @@
     "contact": {
       "title": "Contact — Ligne Verticale",
       "description": "Scrie-ne despre proiectul tău de construcție, renovare sau amenajare interioară."
+    },
+    "terms": {
+      "title": "Termeni și condiții — Ligne Verticale",
+      "description": "Termenii și condițiile de utilizare a site-ului și de colaborare cu Ligne Verticale."
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate — Ligne Verticale",
+      "description": "Cum colectăm, folosim și protejăm datele tale cu caracter personal."
+    },
+    "cookies": {
+      "title": "Politica de cookie-uri — Ligne Verticale",
+      "description": "Ce fișiere folosim pe acest site și cum le poți controla."
     }
   },
   "nav": {
@@ -134,7 +146,7 @@
   "footer": {
     "tagline": "Construcții și renovări cu precizie arhitecturală — case, interioare și spații comerciale, gândite să dureze.",
     "pages": "Pagini",
-    "services": "Servicii",
+    "info": "Informații",
     "contact": "Contact",
     "copyright": "Toate drepturile rezervate.",
     "madeWith": "Construit cu grijă pentru fiecare detaliu."
@@ -215,6 +227,100 @@
   "cookieConsent": {
     "message": "Folosim cookie-uri pentru a-ți îmbunătăți experiența pe acest site.",
     "accept": "Am înțeles"
+  },
+  "legal": {
+    "terms": {
+      "eyebrow": "Legal",
+      "heading": "Termeni și condiții",
+      "updated": "Ultima actualizare: iulie 2026",
+      "intro": "Acești termeni reglementează utilizarea acestui site și colaborarea cu Ligne Verticale pentru proiecte de construcție, renovare și amenajare. Prin navigarea pe site sau prin trimiterea unei solicitări, confirmi că ai citit și ești de acord cu termenii de mai jos.",
+      "sections": [
+        {
+          "title": "Serviciile noastre",
+          "body": "Ligne Verticale oferă servicii de construcții noi, renovări complete, amenajări interioare și exterioare, curățare cu presiune și consultanță tehnică. Fiecare proiect este stabilit printr-un contract separat, care detaliază lucrările, termenele și costurile agreate."
+        },
+        {
+          "title": "Oferte și prețuri",
+          "body": "Prețurile afișate pe site (inclusiv cele din secțiunea Proiecte) au caracter orientativ și ilustrează exemple din portofoliul nostru. Costul final al oricărui proiect este stabilit după o evaluare a terenului, a cerințelor și a bugetului tău, printr-o ofertă scrisă."
+        },
+        {
+          "title": "Conținutul site-ului",
+          "body": "Textele, imaginile și fotografiile proiectelor prezentate pe acest site sunt proprietatea Ligne Verticale sau sunt folosite cu acordul clienților și nu pot fi reproduse fără permisiune scrisă."
+        },
+        {
+          "title": "Limitarea răspunderii",
+          "body": "Depunem eforturi rezonabile pentru ca informațiile de pe site să fie corecte și actualizate, însă nu putem garanta absența erorilor. Ligne Verticale nu răspunde pentru eventuale prejudicii cauzate de utilizarea informațiilor publicate pe site în afara unui contract semnat."
+        },
+        {
+          "title": "Legea aplicabilă",
+          "body": "Acești termeni sunt guvernați de legislația română. Orice litigiu se va soluționa pe cale amiabilă sau, dacă acest lucru nu este posibil, de instanțele competente din România."
+        },
+        {
+          "title": "Contact",
+          "body": "Pentru întrebări legate de acești termeni, ne poți scrie la info@ligneverticale.com."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Legal",
+      "heading": "Politica de confidențialitate",
+      "updated": "Ultima actualizare: iulie 2026",
+      "intro": "Această politică explică ce date colectăm prin acest site, de ce le colectăm și ce drepturi ai în legătură cu ele, în conformitate cu Regulamentul General privind Protecția Datelor (GDPR).",
+      "sections": [
+        {
+          "title": "Operatorul de date",
+          "body": "Ligne Verticale, cu sediul în București, România, este operatorul datelor cu caracter personal colectate prin acest site."
+        },
+        {
+          "title": "Ce date colectăm",
+          "body": "Colectăm datele pe care ni le trimiți prin formularul de contact: nume, adresă de email, număr de telefon (opțional) și conținutul mesajului tău."
+        },
+        {
+          "title": "Scopul prelucrării",
+          "body": "Folosim aceste date exclusiv pentru a răspunde solicitării tale, a pregăti o estimare de preț și a te contacta în legătură cu proiectul discutat."
+        },
+        {
+          "title": "Temei legal și durata stocării",
+          "body": "Prelucrarea se bazează pe consimțământul oferit prin trimiterea formularului. Păstrăm datele atât timp cât este necesar pentru a răspunde solicitării și, ulterior, pentru o perioadă rezonabilă impusă de obligațiile contabile sau contractuale, dacă discuția se materializează într-un proiect."
+        },
+        {
+          "title": "Drepturile tale",
+          "body": "Ai dreptul de acces, rectificare, ștergere, restricționare și opoziție privind datele tale, precum și dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)."
+        },
+        {
+          "title": "Contact",
+          "body": "Pentru exercitarea acestor drepturi, scrie-ne la info@ligneverticale.com sau la bouhabibfelix@gmail.com."
+        }
+      ]
+    },
+    "cookies": {
+      "eyebrow": "Legal",
+      "heading": "Politica de cookie-uri",
+      "updated": "Ultima actualizare: iulie 2026",
+      "intro": "Această pagină explică ce folosim pentru a-ți îmbunătăți experiența pe acest site.",
+      "sections": [
+        {
+          "title": "Ce sunt cookie-urile",
+          "body": "Cookie-urile sunt fișiere mici stocate în browserul tău atunci când vizitezi un site, folosite pentru a reține preferințele sau starea vizitei."
+        },
+        {
+          "title": "Ce folosim pe acest site",
+          "body": "Folosim un singur element de stocare locală (localStorage), necesar pentru a reține faptul că ai văzut și ai închis mesajul despre cookie-uri, astfel încât să nu-ți mai fie afișat la fiecare vizită. Nu folosim cookie-uri de marketing sau de urmărire (tracking) pe acest site."
+        },
+        {
+          "title": "Cum poți controla stocarea locală",
+          "body": "Poți șterge oricând datele stocate local din setările browserului tău (istoric și date de site), ceea ce va face ca mesajul despre cookie-uri să apară din nou."
+        },
+        {
+          "title": "Actualizări ale acestei politici",
+          "body": "Dacă vom introduce în viitor cookie-uri suplimentare (de exemplu pentru analiză de trafic), vom actualiza această pagină și, dacă este necesar, îți vom cere din nou acordul."
+        },
+        {
+          "title": "Contact",
+          "body": "Pentru întrebări despre această politică, scrie-ne la info@ligneverticale.com."
+        }
+      ]
+    }
   },
   "contactPage": {
     "eyebrow": "Contact",

@@ -15,6 +15,18 @@
     "contact": {
       "title": "Contact — Ligne Verticale",
       "description": "Écrivez-nous à propos de votre projet de construction, rénovation ou aménagement intérieur."
+    },
+    "terms": {
+      "title": "Conditions générales — Ligne Verticale",
+      "description": "Les conditions d'utilisation de ce site et de collaboration avec Ligne Verticale."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Ligne Verticale",
+      "description": "Comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "cookies": {
+      "title": "Politique de cookies — Ligne Verticale",
+      "description": "Ce que nous utilisons sur ce site et comment vous pouvez le contrôler."
     }
   },
   "nav": {
@@ -134,7 +146,7 @@
   "footer": {
     "tagline": "Construction et rénovation avec une précision architecturale — maisons, intérieurs et espaces commerciaux, conçus pour durer.",
     "pages": "Pages",
-    "services": "Services",
+    "info": "Informations",
     "contact": "Contact",
     "copyright": "Tous droits réservés.",
     "madeWith": "Construit avec soin, dans le moindre détail."
@@ -215,6 +227,100 @@
   "cookieConsent": {
     "message": "Nous utilisons des cookies pour améliorer votre expérience sur ce site.",
     "accept": "J'ai compris"
+  },
+  "legal": {
+    "terms": {
+      "eyebrow": "Légal",
+      "heading": "Conditions générales",
+      "updated": "Dernière mise à jour : juillet 2026",
+      "intro": "Ces conditions régissent l'utilisation de ce site et notre collaboration pour des projets de construction, rénovation et aménagement intérieur. En naviguant sur ce site ou en nous envoyant une demande, vous confirmez avoir lu et accepté les conditions ci-dessous.",
+      "sections": [
+        {
+          "title": "Nos services",
+          "body": "Ligne Verticale propose des constructions neuves, des rénovations complètes, des aménagements intérieurs et extérieurs, du nettoyage haute pression et du conseil technique. Chaque projet fait l'objet d'un contrat distinct précisant les travaux, les délais et le coût convenus."
+        },
+        {
+          "title": "Devis et tarifs",
+          "body": "Les prix affichés sur le site (y compris dans la section Projets) sont indicatifs et illustrent des exemples de notre portefeuille. Le coût final de tout projet est fixé après évaluation de votre terrain, de vos besoins et de votre budget, par un devis écrit."
+        },
+        {
+          "title": "Contenu du site",
+          "body": "Les textes, images et photos de projets présentés sur ce site sont la propriété de Ligne Verticale ou utilisés avec l'accord des clients, et ne peuvent être reproduits sans autorisation écrite."
+        },
+        {
+          "title": "Limitation de responsabilité",
+          "body": "Nous faisons des efforts raisonnables pour que les informations du site soient exactes et à jour, sans pouvoir garantir l'absence d'erreurs. Ligne Verticale n'est pas responsable des dommages résultant de l'utilisation des informations publiées sur le site en dehors d'un contrat signé."
+        },
+        {
+          "title": "Loi applicable",
+          "body": "Ces conditions sont régies par le droit roumain. Tout litige sera réglé à l'amiable ou, à défaut, par les tribunaux compétents de Roumanie."
+        },
+        {
+          "title": "Contact",
+          "body": "Pour toute question relative à ces conditions, écrivez-nous à info@ligneverticale.com."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Légal",
+      "heading": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : juillet 2026",
+      "intro": "Cette politique explique quelles données nous collectons via ce site, pourquoi nous les collectons et quels sont vos droits à leur égard, conformément au Règlement général sur la protection des données (RGPD).",
+      "sections": [
+        {
+          "title": "Responsable du traitement",
+          "body": "Ligne Verticale, basée à Bucarest, Roumanie, est responsable du traitement des données personnelles collectées via ce site."
+        },
+        {
+          "title": "Quelles données nous collectons",
+          "body": "Nous collectons les données que vous nous envoyez via le formulaire de contact : nom, adresse email, numéro de téléphone (facultatif) et le contenu de votre message."
+        },
+        {
+          "title": "Finalité du traitement",
+          "body": "Nous utilisons ces données uniquement pour répondre à votre demande, préparer une estimation de prix et vous contacter au sujet du projet évoqué."
+        },
+        {
+          "title": "Base légale et durée de conservation",
+          "body": "Le traitement repose sur le consentement donné lors de l'envoi du formulaire. Nous conservons les données le temps nécessaire pour répondre à votre demande puis, si l'échange donne lieu à un projet, pour la durée raisonnable imposée par nos obligations comptables ou contractuelles."
+        },
+        {
+          "title": "Vos droits",
+          "body": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition concernant vos données, ainsi que du droit d'introduire une réclamation auprès de l'autorité roumaine de protection des données (ANSPDCP)."
+        },
+        {
+          "title": "Contact",
+          "body": "Pour exercer ces droits, écrivez-nous à info@ligneverticale.com ou à bouhabibfelix@gmail.com."
+        }
+      ]
+    },
+    "cookies": {
+      "eyebrow": "Légal",
+      "heading": "Politique de cookies",
+      "updated": "Dernière mise à jour : juillet 2026",
+      "intro": "Cette page explique ce que nous utilisons pour améliorer votre expérience sur ce site.",
+      "sections": [
+        {
+          "title": "Que sont les cookies",
+          "body": "Les cookies sont de petits fichiers stockés dans votre navigateur lors de la visite d'un site, utilisés pour mémoriser des préférences ou l'état de votre visite."
+        },
+        {
+          "title": "Ce que nous utilisons sur ce site",
+          "body": "Nous utilisons un seul élément de stockage local (localStorage), nécessaire pour mémoriser que vous avez vu et fermé notre message sur les cookies, afin qu'il ne s'affiche plus à chaque visite. Nous n'utilisons aucun cookie marketing ou de suivi sur ce site."
+        },
+        {
+          "title": "Comment contrôler le stockage local",
+          "body": "Vous pouvez à tout moment effacer les données stockées localement depuis les paramètres de votre navigateur (historique et données de site), ce qui fera réapparaître le message sur les cookies."
+        },
+        {
+          "title": "Mises à jour de cette politique",
+          "body": "Si nous introduisons de nouveaux cookies à l'avenir (par exemple pour l'analyse du trafic), nous mettrons cette page à jour et, si nécessaire, solliciterons à nouveau votre consentement."
+        },
+        {
+          "title": "Contact",
+          "body": "Pour toute question sur cette politique, écrivez-nous à info@ligneverticale.com."
+        }
+      ]
+    }
   },
   "contactPage": {
     "eyebrow": "Contact",

@@ -15,6 +15,18 @@
     "contact": {
       "title": "Contact — Ligne Verticale",
       "description": "Write to us about your construction, renovation or interior design project."
+    },
+    "terms": {
+      "title": "Terms & Conditions — Ligne Verticale",
+      "description": "The terms and conditions for using this site and working with Ligne Verticale."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Ligne Verticale",
+      "description": "How we collect, use and protect your personal data."
+    },
+    "cookies": {
+      "title": "Cookie Policy — Ligne Verticale",
+      "description": "What we use on this site and how you can control it."
     }
   },
   "nav": {
@@ -134,7 +146,7 @@
   "footer": {
     "tagline": "Construction and renovation with architectural precision — homes, interiors and commercial spaces, built to last.",
     "pages": "Pages",
-    "services": "Services",
+    "info": "Information",
     "contact": "Contact",
     "copyright": "All rights reserved.",
     "madeWith": "Built with care for every detail."
@@ -215,6 +227,100 @@
   "cookieConsent": {
     "message": "We use cookies to improve your experience on this site.",
     "accept": "Got it"
+  },
+  "legal": {
+    "terms": {
+      "eyebrow": "Legal",
+      "heading": "Terms & Conditions",
+      "updated": "Last updated: July 2026",
+      "intro": "These terms govern the use of this site and our work together on construction, renovation and interior design projects. By browsing this site or sending us a request, you confirm that you have read and agree to the terms below.",
+      "sections": [
+        {
+          "title": "Our services",
+          "body": "Ligne Verticale provides new construction, full renovations, interior and exterior design, pressure washing and technical consulting. Every project is set out in a separate contract detailing the agreed work, timeline and cost."
+        },
+        {
+          "title": "Quotes and pricing",
+          "body": "Prices shown on the site (including those in the Projects section) are indicative and illustrate examples from our portfolio. The final cost of any project is set after assessing your site, requirements and budget, through a written quote."
+        },
+        {
+          "title": "Site content",
+          "body": "The text, images and project photos on this site are the property of Ligne Verticale or used with client permission, and may not be reproduced without written consent."
+        },
+        {
+          "title": "Limitation of liability",
+          "body": "We make reasonable efforts to keep the information on this site accurate and up to date, but cannot guarantee it is error-free. Ligne Verticale is not liable for damages arising from the use of information published on the site outside of a signed contract."
+        },
+        {
+          "title": "Governing law",
+          "body": "These terms are governed by Romanian law. Any dispute will be settled amicably or, failing that, by the competent courts in Romania."
+        },
+        {
+          "title": "Contact",
+          "body": "For questions about these terms, write to us at info@ligneverticale.com."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Legal",
+      "heading": "Privacy Policy",
+      "updated": "Last updated: July 2026",
+      "intro": "This policy explains what data we collect through this site, why we collect it, and what rights you have over it, in line with the General Data Protection Regulation (GDPR).",
+      "sections": [
+        {
+          "title": "Data controller",
+          "body": "Ligne Verticale, based in Bucharest, Romania, is the controller of the personal data collected through this site."
+        },
+        {
+          "title": "What data we collect",
+          "body": "We collect the data you send us through the contact form: name, email address, phone number (optional) and the content of your message."
+        },
+        {
+          "title": "Purpose of processing",
+          "body": "We use this data solely to respond to your request, prepare a price estimate, and contact you about the project discussed."
+        },
+        {
+          "title": "Legal basis and retention",
+          "body": "Processing is based on the consent given when submitting the form. We keep the data as long as needed to respond to your request and, afterwards, for a reasonable period required by accounting or contractual obligations if the discussion turns into a project."
+        },
+        {
+          "title": "Your rights",
+          "body": "You have the right to access, correct, delete, restrict and object to the processing of your data, as well as the right to lodge a complaint with the Romanian Data Protection Authority (ANSPDCP)."
+        },
+        {
+          "title": "Contact",
+          "body": "To exercise these rights, write to us at info@ligneverticale.com or bouhabibfelix@gmail.com."
+        }
+      ]
+    },
+    "cookies": {
+      "eyebrow": "Legal",
+      "heading": "Cookie Policy",
+      "updated": "Last updated: July 2026",
+      "intro": "This page explains what we use to improve your experience on this site.",
+      "sections": [
+        {
+          "title": "What cookies are",
+          "body": "Cookies are small files stored in your browser when you visit a site, used to remember preferences or the state of your visit."
+        },
+        {
+          "title": "What we use on this site",
+          "body": "We use a single piece of local storage (localStorage), needed to remember that you've seen and closed our cookie message, so it isn't shown again on every visit. We don't use marketing or tracking cookies on this site."
+        },
+        {
+          "title": "How to control local storage",
+          "body": "You can clear locally stored data at any time from your browser settings (browsing history and site data), which will make the cookie message appear again."
+        },
+        {
+          "title": "Updates to this policy",
+          "body": "If we introduce additional cookies in the future (for example for traffic analytics), we'll update this page and, if required, ask for your consent again."
+        },
+        {
+          "title": "Contact",
+          "body": "For questions about this policy, write to us at info@ligneverticale.com."
+        }
+      ]
+    }
   },
   "contactPage": {
     "eyebrow": "Contact",

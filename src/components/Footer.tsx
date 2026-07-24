@@ -5,7 +5,7 @@ import {
   FacebookLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react/dist/ssr";
-import { contactInfo, servicesMeta } from "@/lib/data";
+import { contactInfo } from "@/lib/data";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -21,6 +21,12 @@ export default function Footer({
     { href: `/${locale}/proiecte`, label: dict.nav.projects },
     { href: `/${locale}/despre-noi`, label: dict.nav.about },
     { href: `/${locale}/contact`, label: dict.nav.contact },
+  ];
+
+  const infoLinks = [
+    { href: `/${locale}/termeni-si-conditii`, label: dict.legal.terms.heading },
+    { href: `/${locale}/politica-confidentialitate`, label: dict.legal.privacy.heading },
+    { href: `/${locale}/politica-cookies`, label: dict.legal.cookies.heading },
   ];
 
   return (
@@ -74,11 +80,18 @@ export default function Footer({
 
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-ink-soft/70">
-              {dict.footer.services}
+              {dict.footer.info}
             </p>
-            <ul className="mt-4 space-y-2.5 text-sm text-ink-soft">
-              {servicesMeta.map((service) => (
-                <li key={service.key}>{dict.services.items[service.key].title}</li>
+            <ul className="mt-4 space-y-2.5">
+              {infoLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-ink-soft transition-colors hover:text-ink"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
