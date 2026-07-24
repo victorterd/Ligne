@@ -5,13 +5,14 @@ import {
   Buildings,
   PaintRoller,
   Armchair,
+  Drop,
   Compass,
 } from "@phosphor-icons/react/dist/ssr";
 import { servicesMeta } from "@/lib/data";
 import type { Dictionary } from "@/i18n/dictionaries";
 import IconCardGrid from "./IconCardGrid";
 
-const icons = { Buildings, PaintRoller, Armchair, Compass };
+const icons = { Buildings, PaintRoller, Armchair, Drop, Compass };
 
 export default function Services({ dict }: { dict: Dictionary["services"] }) {
   const items = servicesMeta.map((service) => ({

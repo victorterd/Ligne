@@ -2,6 +2,7 @@ export const servicesMeta = [
   { key: "constructii", icon: "Buildings" },
   { key: "renovari", icon: "PaintRoller" },
   { key: "amenajari", icon: "Armchair" },
+  { key: "curatare", icon: "Drop" },
   { key: "consultanta", icon: "Compass" },
 ] as const;
 

@@ -47,7 +47,7 @@
   },
   "services": {
     "heading": "Ce que nous construisons",
-    "subtitle": "Quatre métiers, une seule équipe — du premier plan à la dernière couche de peinture.",
+    "subtitle": "Cinq métiers, une seule équipe — du premier plan à la dernière couche de peinture.",
     "items": {
       "constructii": {
         "title": "Constructions neuves",
@@ -60,6 +60,10 @@
       "amenajari": {
         "title": "Aménagement intérieur",
         "copy": "Nous concevons et aménageons des intérieurs qui allient confort quotidien et esthétique raffinée."
+      },
+      "curatare": {
+        "title": "Nettoyage haute pression",
+        "copy": "Nous nettoyons façades, terrasses, allées et toitures avec du matériel professionnel de nettoyage haute pression, sans abîmer les surfaces."
       },
       "consultanta": {
         "title": "Conseil & conception",

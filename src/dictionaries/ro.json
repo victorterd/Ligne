@@ -47,7 +47,7 @@
   },
   "services": {
     "heading": "Ce construim",
-    "subtitle": "Patru servicii, o singură echipă — de la primul plan până la ultimul strat de vopsea.",
+    "subtitle": "Cinci servicii, o singură echipă — de la primul plan până la ultimul strat de vopsea.",
     "items": {
       "constructii": {
         "title": "Construcții noi",
@@ -60,6 +60,10 @@
       "amenajari": {
         "title": "Amenajări interioare",
         "copy": "Proiectăm și amenajăm interioare care îmbină funcționalitatea zilnică cu o estetică rafinată."
+      },
+      "curatare": {
+        "title": "Curățare cu presiune",
+        "copy": "Curățăm fațade, terase, alei și acoperișuri cu echipamente profesionale de spălare cu presiune, fără să deteriorăm suprafețele."
       },
       "consultanta": {
         "title": "Consultanță & proiectare",

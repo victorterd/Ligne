@@ -11,6 +11,15 @@ type Item = {
   copy: string;
 };
 
+// Literal (statically analyzable) span classes per column count, used to
+// stretch a lone trailing card across the row instead of leaving it next
+// to an empty gap.
+const ORPHAN_SPAN: Record<2 | 3 | 4, { sm: number; smSpan: string; lg?: number; lgSpan?: string }> = {
+  2: { sm: 2, smSpan: "sm:col-span-2" },
+  3: { sm: 2, smSpan: "sm:col-span-2", lg: 3, lgSpan: "lg:col-span-3" },
+  4: { sm: 2, smSpan: "sm:col-span-2", lg: 4, lgSpan: "lg:col-span-4" },
+};
+
 export default function IconCardGrid({
   items,
   columns = 4,
@@ -25,12 +34,23 @@ export default function IconCardGrid({
         ? "sm:grid-cols-2 lg:grid-cols-3"
         : "sm:grid-cols-2 lg:grid-cols-4";
 
+  const { sm, smSpan, lg, lgSpan } = ORPHAN_SPAN[columns];
+  const isOrphanAt = (count: number) =>
+    items.length > count && items.length % count === 1;
+  const lastItemSpan = [
+    isOrphanAt(sm) && smSpan,
+    lg && lgSpan && isOrphanAt(lg) && lgSpan,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <div
       className={`grid grid-cols-1 gap-px overflow-hidden rounded-3xl bg-line ${colsClass}`}
     >
       {items.map((item, i) => {
         const Icon = item.icon;
+        const isLast = i === items.length - 1;
         return (
           <motion.div
             key={item.title}
@@ -42,7 +62,9 @@ export default function IconCardGrid({
               delay: i * 0.08,
               ease,
             }}
-            className="group flex flex-col gap-6 bg-paper-dim p-7 transition-colors duration-300 hover:bg-paper"
+            className={`group flex flex-col gap-6 bg-paper-dim p-7 transition-colors duration-300 hover:bg-paper ${
+              isLast ? lastItemSpan : ""
+            }`}
           >
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-accent">
               <Icon size={20} weight="light" />

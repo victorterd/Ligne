@@ -47,7 +47,7 @@
   },
   "services": {
     "heading": "What we build",
-    "subtitle": "Four services, one team — from the first sketch to the last coat of paint.",
+    "subtitle": "Five services, one team — from the first sketch to the last coat of paint.",
     "items": {
       "constructii": {
         "title": "New construction",
@@ -60,6 +60,10 @@
       "amenajari": {
         "title": "Interior design",
         "copy": "We design and fit out interiors that balance everyday function with refined aesthetics."
+      },
+      "curatare": {
+        "title": "Pressure washing",
+        "copy": "We clean façades, terraces, driveways and roofs with professional pressure-washing equipment, without damaging the surfaces."
       },
       "consultanta": {
         "title": "Consulting & design",
