@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -61,19 +62,15 @@ export default function Navbar({
             : "border-white/15 bg-white/5 backdrop-blur-md"
         }`}
       >
-        <Link
-          href={`/${locale}`}
-          className={`flex items-center gap-2 text-[0.95rem] font-semibold tracking-tight transition-colors ${
-            scrolled || open ? "text-ink" : "text-white"
-          }`}
-        >
-          <span
-            aria-hidden
-            className={`flex h-7 w-4 items-center justify-center border-l-2 ${
-              scrolled || open ? "border-accent" : "border-white"
-            }`}
+        <Link href={`/${locale}`} className="flex items-center" aria-label="Ligne Verticale">
+          <Image
+            src={scrolled || open ? "/logo-black.png" : "/logo-white.png"}
+            alt="Ligne Verticale"
+            width={210}
+            height={52}
+            priority
+            className="h-6 w-auto sm:h-7"
           />
-          Ligne Verticale
         </Link>
 
         <nav

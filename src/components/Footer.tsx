@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   InstagramLogo,
   FacebookLogo,
@@ -27,12 +28,14 @@ export default function Footer({
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Link
-              href={`/${locale}`}
-              className="flex items-center gap-2 text-lg font-semibold tracking-tight text-ink"
-            >
-              <span aria-hidden className="flex h-7 w-4 items-center justify-center border-l-2 border-accent" />
-              Ligne Verticale
+            <Link href={`/${locale}`} className="flex items-center" aria-label="Ligne Verticale">
+              <Image
+                src="/logo-black.png"
+                alt="Ligne Verticale"
+                width={210}
+                height={52}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               {dict.footer.tagline}
