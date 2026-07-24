@@ -122,7 +122,7 @@
     }
   },
   "projectCard": {
-    "priceFrom": "de la",
+    "beforeLabel": "Înainte",
     "afterLabel": "După renovare",
     "durationLabel": "Durată"
   },

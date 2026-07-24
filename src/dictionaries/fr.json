@@ -122,7 +122,7 @@
     }
   },
   "projectCard": {
-    "priceFrom": "à partir de",
+    "beforeLabel": "Avant",
     "afterLabel": "Après rénovation",
     "durationLabel": "Durée"
   },

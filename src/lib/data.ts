@@ -53,7 +53,8 @@ export type ProjectMeta = {
   type: ProjectFilterKey;
   location: string;
   year: string;
-  price: string;
+  priceBefore: string;
+  priceAfter: string;
   image: string;
 };
 
@@ -63,7 +64,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "construction",
     location: "Cluj-Napoca",
     year: "2025",
-    price: "185.000 €",
+    priceBefore: "142.000 €",
+    priceAfter: "185.000 €",
     image: "/images/hero-villa.jpg",
   },
   {
@@ -71,7 +73,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "București",
     year: "2025",
-    price: "12.500 €",
+    priceBefore: "8.200 €",
+    priceAfter: "12.500 €",
     image: "/images/project-kitchen-dark.jpg",
   },
   {
@@ -79,7 +82,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "interiorDesign",
     location: "Timișoara",
     year: "2024",
-    price: "9.800 €",
+    priceBefore: "6.500 €",
+    priceAfter: "9.800 €",
     image: "/images/project-living-room.jpg",
   },
   {
@@ -87,7 +91,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "construction",
     location: "Brașov",
     year: "2024",
-    price: "42.000 €",
+    priceBefore: "31.000 €",
+    priceAfter: "42.000 €",
     image: "/images/project-facade-wood.jpg",
   },
   {
@@ -95,7 +100,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "Iași",
     year: "2024",
-    price: "15.200 €",
+    priceBefore: "10.400 €",
+    priceAfter: "15.200 €",
     image: "/images/project-kitchen-marble.jpg",
   },
   {
@@ -103,7 +109,8 @@ export const projectsMeta: ProjectMeta[] = [
     type: "exteriorDesign",
     location: "Cluj-Napoca",
     year: "2023",
-    price: "27.000 €",
+    priceBefore: "19.500 €",
+    priceAfter: "27.000 €",
     image: "/images/project-house-garden.jpg",
   },
 ];

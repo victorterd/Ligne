@@ -141,10 +141,10 @@ export default function ProjectsShowcase({
 
                 <div className="absolute left-4 right-16 top-4 flex flex-wrap gap-2">
                   <span className="rounded-full border border-red-200/70 bg-red-50/95 px-3 py-1 text-xs font-medium text-red-700 backdrop-blur-sm">
-                    {cardDict.priceFrom} {project.price}
+                    {cardDict.beforeLabel}: {project.priceBefore}
                   </span>
                   <span className="rounded-full border border-emerald-200/70 bg-emerald-50/95 px-3 py-1 text-xs font-medium text-emerald-700 backdrop-blur-sm">
-                    {cardDict.afterLabel}
+                    {cardDict.afterLabel}: {project.priceAfter}
                   </span>
                 </div>
 
