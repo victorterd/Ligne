@@ -36,6 +36,7 @@ export default async function Home({
       <ProjectsShowcase
         locale={locale}
         dict={dict.projectsShowcase}
+        cardDict={dict.projectCard}
         projectsDict={dict.projects}
       />
       <CtaBanner locale={locale} dict={dict.cta} />

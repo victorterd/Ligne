@@ -92,28 +92,39 @@
   "projects": {
     "vila-cu-terasa-suspendata": {
       "title": "Villa à terrasse suspendue",
-      "category": "Construction résidentielle"
+      "category": "Construction résidentielle",
+      "duration": "8 mois"
     },
     "bucatarie-in-tonuri-de-negru": {
       "title": "Cuisine tons noirs",
-      "category": "Rénovation intérieure"
+      "category": "Rénovation intérieure",
+      "duration": "3 semaines"
     },
     "living-cu-accente-de-cupru": {
       "title": "Salon aux accents cuivrés",
-      "category": "Aménagement intérieur"
+      "category": "Aménagement intérieur",
+      "duration": "2 semaines"
     },
     "fatada-imbracata-in-lemn": {
       "title": "Façade habillée de bois",
-      "category": "Construction résidentielle"
+      "category": "Construction résidentielle",
+      "duration": "5 mois"
     },
     "bucatarie-cu-blat-din-marmura": {
       "title": "Cuisine au plan de travail en marbre",
-      "category": "Rénovation intérieure"
+      "category": "Rénovation intérieure",
+      "duration": "4 semaines"
     },
     "casa-cu-gradina-interioara": {
       "title": "Maison avec jardin intérieur",
-      "category": "Aménagement extérieur"
+      "category": "Aménagement extérieur",
+      "duration": "6 mois"
     }
+  },
+  "projectCard": {
+    "priceFrom": "à partir de",
+    "afterLabel": "Après rénovation",
+    "durationLabel": "Durée"
   },
   "cta": {
     "heading": "Un projet en tête ?",

@@ -12,10 +12,12 @@ import type { Dictionary } from "@/i18n/dictionaries";
 export default function ProjectsShowcase({
   locale,
   dict,
+  cardDict,
   projectsDict,
 }: {
   locale: Locale;
   dict: Dictionary["projectsShowcase"];
+  cardDict: Dictionary["projectCard"];
   projectsDict: Dictionary["projects"];
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -137,6 +139,15 @@ export default function ProjectsShowcase({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
+                <div className="absolute left-4 right-16 top-4 flex flex-wrap gap-2">
+                  <span className="rounded-full border border-red-200/70 bg-red-50/95 px-3 py-1 text-xs font-medium text-red-700 backdrop-blur-sm">
+                    {cardDict.priceFrom} {project.price}
+                  </span>
+                  <span className="rounded-full border border-emerald-200/70 bg-emerald-50/95 px-3 py-1 text-xs font-medium text-emerald-700 backdrop-blur-sm">
+                    {cardDict.afterLabel}
+                  </span>
+                </div>
+
                 <span className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
                   <ArrowUpRight size={16} />
                 </span>
@@ -150,6 +161,9 @@ export default function ProjectsShowcase({
                   </h3>
                   <p className="mt-1 text-sm text-white/60">
                     {project.location} — {project.year}
+                  </p>
+                  <p className="mt-1 text-xs text-white/50">
+                    {cardDict.durationLabel}: {projectsDict[project.slug].duration}
                   </p>
                 </div>
               </Link>

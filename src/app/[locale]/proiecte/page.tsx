@@ -43,7 +43,11 @@ export default async function ProiectePage({
 
       <section className="px-4 pb-24 sm:px-6 sm:pb-32 lg:px-10">
         <div className="mx-auto max-w-6xl">
-          <ProjectsGrid dict={dict.projectsPage} projectsDict={dict.projects} />
+          <ProjectsGrid
+            dict={dict.projectsPage}
+            cardDict={dict.projectCard}
+            projectsDict={dict.projects}
+          />
         </div>
       </section>
 

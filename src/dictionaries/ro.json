@@ -92,28 +92,39 @@
   "projects": {
     "vila-cu-terasa-suspendata": {
       "title": "Vilă cu terasă suspendată",
-      "category": "Construcție rezidențială"
+      "category": "Construcție rezidențială",
+      "duration": "8 luni"
     },
     "bucatarie-in-tonuri-de-negru": {
       "title": "Bucătărie în tonuri de negru",
-      "category": "Renovare interioară"
+      "category": "Renovare interioară",
+      "duration": "3 săptămâni"
     },
     "living-cu-accente-de-cupru": {
       "title": "Living cu accente de cupru",
-      "category": "Amenajare interioară"
+      "category": "Amenajare interioară",
+      "duration": "2 săptămâni"
     },
     "fatada-imbracata-in-lemn": {
       "title": "Fațadă îmbrăcată în lemn",
-      "category": "Construcție rezidențială"
+      "category": "Construcție rezidențială",
+      "duration": "5 luni"
     },
     "bucatarie-cu-blat-din-marmura": {
       "title": "Bucătărie cu blat din marmură",
-      "category": "Renovare interioară"
+      "category": "Renovare interioară",
+      "duration": "4 săptămâni"
     },
     "casa-cu-gradina-interioara": {
       "title": "Casă cu grădină interioară",
-      "category": "Amenajare exterioară"
+      "category": "Amenajare exterioară",
+      "duration": "6 luni"
     }
+  },
+  "projectCard": {
+    "priceFrom": "de la",
+    "afterLabel": "După renovare",
+    "durationLabel": "Durată"
   },
   "cta": {
     "heading": "Ai un proiect în minte?",

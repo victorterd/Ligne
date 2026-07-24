@@ -14,9 +14,11 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function ProjectsGrid({
   dict,
+  cardDict,
   projectsDict,
 }: {
   dict: Dictionary["projectsPage"];
+  cardDict: Dictionary["projectCard"];
   projectsDict: Dictionary["projects"];
 }) {
   const [active, setActive] = useState<ProjectFilterKey | "all">("all");
@@ -72,6 +74,15 @@ export default function ProjectsGrid({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
+              <div className="absolute left-4 right-4 top-4 flex flex-wrap gap-2">
+                <span className="rounded-full border border-red-200/70 bg-red-50/95 px-3 py-1 text-xs font-medium text-red-700 backdrop-blur-sm">
+                  {cardDict.priceFrom} {project.price}
+                </span>
+                <span className="rounded-full border border-emerald-200/70 bg-emerald-50/95 px-3 py-1 text-xs font-medium text-emerald-700 backdrop-blur-sm">
+                  {cardDict.afterLabel}
+                </span>
+              </div>
+
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">
                   {projectsDict[project.slug].category}
@@ -81,6 +92,9 @@ export default function ProjectsGrid({
                 </h3>
                 <p className="mt-1 text-sm text-white/60">
                   {project.location} — {project.year}
+                </p>
+                <p className="mt-1 text-xs text-white/50">
+                  {cardDict.durationLabel}: {projectsDict[project.slug].duration}
                 </p>
               </div>
             </motion.div>

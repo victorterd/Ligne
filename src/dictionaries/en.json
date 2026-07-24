@@ -92,28 +92,39 @@
   "projects": {
     "vila-cu-terasa-suspendata": {
       "title": "Villa with a suspended terrace",
-      "category": "Residential construction"
+      "category": "Residential construction",
+      "duration": "8 months"
     },
     "bucatarie-in-tonuri-de-negru": {
       "title": "Kitchen in shades of black",
-      "category": "Interior renovation"
+      "category": "Interior renovation",
+      "duration": "3 weeks"
     },
     "living-cu-accente-de-cupru": {
       "title": "Living room with copper accents",
-      "category": "Interior design"
+      "category": "Interior design",
+      "duration": "2 weeks"
     },
     "fatada-imbracata-in-lemn": {
       "title": "Timber-clad façade",
-      "category": "Residential construction"
+      "category": "Residential construction",
+      "duration": "5 months"
     },
     "bucatarie-cu-blat-din-marmura": {
       "title": "Kitchen with a marble countertop",
-      "category": "Interior renovation"
+      "category": "Interior renovation",
+      "duration": "4 weeks"
     },
     "casa-cu-gradina-interioara": {
       "title": "House with an inner garden",
-      "category": "Outdoor design"
+      "category": "Outdoor design",
+      "duration": "6 months"
     }
+  },
+  "projectCard": {
+    "priceFrom": "from",
+    "afterLabel": "After renovation",
+    "durationLabel": "Duration"
   },
   "cta": {
     "heading": "Have a project in mind?",
