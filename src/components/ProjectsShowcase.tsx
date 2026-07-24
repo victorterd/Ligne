@@ -23,25 +23,55 @@ export default function ProjectsShowcase({
   const trackRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [active, setActive] = useState(0);
+  const activeRef = useRef(0);
+  const [autoPaused, setAutoPaused] = useState(false);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = Number((entry.target as HTMLElement).dataset.index);
-          if (entry.isIntersecting && entry.intersectionRatio > 0.6) {
-            setActive(index);
-          }
-        });
-      },
-      { root: track, threshold: [0, 0.6, 1] }
-    );
+    let debounceTimer: ReturnType<typeof setTimeout>;
 
-    cardRefs.current.forEach((card) => card && observer.observe(card));
-    return () => observer.disconnect();
+    const updateActive = () => {
+      const maxScrollLeft = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScrollLeft - 2) {
+        setActive(projectsMeta.length - 1);
+        return;
+      }
+      if (track.scrollLeft <= 2) {
+        setActive(0);
+        return;
+      }
+
+      const trackRect = track.getBoundingClientRect();
+      const center = trackRect.left + trackRect.width / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      cardRefs.current.forEach((card, i) => {
+        if (!card) return;
+        const rect = card.getBoundingClientRect();
+        const distance = Math.abs(rect.left + rect.width / 2 - center);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = i;
+        }
+      });
+
+      setActive(closestIndex);
+    };
+
+    const onScroll = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(updateActive, 100);
+    };
+
+    updateActive();
+    track.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      track.removeEventListener("scroll", onScroll);
+      clearTimeout(debounceTimer);
+    };
   }, []);
 
   const scrollToIndex = (index: number) => {
@@ -52,6 +82,18 @@ export default function ProjectsShowcase({
       block: "nearest",
     });
   };
+
+  useEffect(() => {
+    activeRef.current = active;
+  }, [active]);
+
+  useEffect(() => {
+    if (autoPaused) return;
+    const timer = setInterval(() => {
+      scrollToIndex((activeRef.current + 1) % projectsMeta.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [autoPaused]);
 
   return (
     <section className="bg-ink px-4 py-24 text-paper sm:px-6 sm:py-32 lg:px-10">
@@ -110,6 +152,9 @@ export default function ProjectsShowcase({
 
         <div
           ref={trackRef}
+          onMouseEnter={() => setAutoPaused(true)}
+          onMouseLeave={() => setAutoPaused(false)}
+          onPointerDown={() => setAutoPaused(true)}
           className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4"
         >
           {projectsMeta.map((project, i) => (
