@@ -10,9 +10,9 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { servicesMeta } from "@/lib/data";
 import type { Dictionary } from "@/i18n/dictionaries";
-import IconCardGrid from "./IconCardGrid";
 
 const icons = { Buildings, PaintRoller, Armchair, Drop, Compass };
+const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Services({ dict }: { dict: Dictionary["services"] }) {
   const items = servicesMeta.map((service) => ({
@@ -45,8 +45,36 @@ export default function Services({ dict }: { dict: Dictionary["services"] }) {
           </motion.p>
         </div>
 
-        <div className="mt-14">
-          <IconCardGrid items={items} columns={4} />
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-3xl bg-line sm:grid-cols-2 lg:grid-cols-6">
+          {items.map((item, i) => {
+            const Icon = item.icon;
+            const isTopRow = i < 3;
+            const isLast = i === items.length - 1;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.08, ease }}
+                className={`group flex flex-col gap-6 bg-paper-dim p-7 transition-colors duration-300 hover:bg-paper ${
+                  isTopRow ? "lg:col-span-2" : "lg:col-span-3"
+                } ${isLast ? "sm:col-span-2" : ""}`}
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-colors duration-300 group-hover:bg-accent">
+                  <Icon size={20} weight="light" />
+                </span>
+                <div>
+                  <h3 className="text-lg font-medium tracking-tight text-ink">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                    {item.copy}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
