@@ -68,28 +68,32 @@ export default async function ContactPage({
 
             <div className="rounded-3xl bg-mist p-7">
               <ul className="flex flex-col gap-4 text-sm text-ink">
-                <li className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
-                    <Phone size={16} />
-                  </span>
-                  <a
-                    href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-                    className="hover:text-accent"
-                  >
-                    {contactInfo.phone}
-                  </a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
-                    <EnvelopeSimple size={16} />
-                  </span>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="hover:text-accent"
-                  >
-                    {contactInfo.email}
-                  </a>
-                </li>
+                {contactInfo.phones.map((phone) => (
+                  <li key={phone} className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
+                      <Phone size={16} />
+                    </span>
+                    <a
+                      href={`tel:${phone.replace(/\s+/g, "")}`}
+                      className="hover:text-accent"
+                    >
+                      {phone}
+                    </a>
+                  </li>
+                ))}
+                {contactInfo.emails.map((email) => (
+                  <li key={email} className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
+                      <EnvelopeSimple size={16} />
+                    </span>
+                    <a
+                      href={`mailto:${email}`}
+                      className="hover:text-accent"
+                    >
+                      {email}
+                    </a>
+                  </li>
+                ))}
                 <li className="flex items-center gap-3">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-paper">
                     <MapPin size={16} />

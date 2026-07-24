@@ -88,22 +88,26 @@ export default function Footer({
               {dict.footer.contact}
             </p>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-soft">
-              <li>
-                <a
-                  href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-                  className="transition-colors hover:text-ink"
-                >
-                  {contactInfo.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="transition-colors hover:text-ink"
-                >
-                  {contactInfo.email}
-                </a>
-              </li>
+              {contactInfo.phones.map((phone) => (
+                <li key={phone}>
+                  <a
+                    href={`tel:${phone.replace(/\s+/g, "")}`}
+                    className="transition-colors hover:text-ink"
+                  >
+                    {phone}
+                  </a>
+                </li>
+              ))}
+              {contactInfo.emails.map((email) => (
+                <li key={email}>
+                  <a
+                    href={`mailto:${email}`}
+                    className="transition-colors hover:text-ink"
+                  >
+                    {email}
+                  </a>
+                </li>
+              ))}
               <li>{contactInfo.address}</li>
             </ul>
           </div>

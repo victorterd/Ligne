@@ -118,8 +118,8 @@ export const projectsMeta: ProjectMeta[] = [
 export const projectTypeOptionCount = 4;
 
 export const contactInfo = {
-  phone: "+40 712 345 678",
-  email: "contact@ligneverticale.ro",
+  phones: ["+40 792 887 908", "+40 723 555 500"],
+  emails: ["info@ligneverticale.com", "bouhabibfelix@gmail.com"],
   address: "București, România",
   hours: [
     { key: "weekdays", value: "09:00 – 18:00" },
