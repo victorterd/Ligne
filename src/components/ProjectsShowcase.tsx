@@ -159,7 +159,6 @@ export default function ProjectsShowcase({
                   <h3 className="mt-2 text-xl font-medium tracking-tight text-white">
                     {projectsDict[project.slug].title}
                   </h3>
-                  <p className="mt-1 text-sm text-white/60">{project.year}</p>
                   <p className="mt-1 text-xs text-white/50">
                     {cardDict.durationLabel}: {projectsDict[project.slug].duration}
                   </p>
