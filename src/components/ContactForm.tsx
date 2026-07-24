@@ -19,6 +19,7 @@ export default function ContactForm({
   dict: Dictionary["contactPage"]["form"];
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  const [debugDetail, setDebugDetail] = useState<string | null>(null);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -26,6 +27,7 @@ export default function ContactForm({
     const data = new FormData(form);
 
     setStatus("sending");
+    setDebugDetail(null);
 
     try {
       const response = await fetch("/api/contact", {
@@ -41,7 +43,15 @@ export default function ContactForm({
         }),
       });
 
-      if (!response.ok) throw new Error("request_failed");
+      const json = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        setDebugDetail(
+          [json?.error, json?.detail].filter(Boolean).join(" — ") ||
+            `HTTP ${response.status}`
+        );
+        throw new Error("request_failed");
+      }
 
       setStatus("success");
       form.reset();
@@ -146,10 +156,17 @@ export default function ContactForm({
         </p>
       )}
       {status === "error" && (
-        <p className="flex items-center gap-2 text-sm text-red-600">
-          <WarningCircle size={16} weight="fill" />
-          {dict.error}
-        </p>
+        <div className="flex flex-col gap-1">
+          <p className="flex items-center gap-2 text-sm text-red-600">
+            <WarningCircle size={16} weight="fill" />
+            {dict.error}
+          </p>
+          {debugDetail && (
+            <p className="pl-6 font-mono text-xs text-red-600/70">
+              {debugDetail}
+            </p>
+          )}
+        </div>
       )}
     </form>
   );

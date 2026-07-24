@@ -53,7 +53,10 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured");
-    return NextResponse.json({ error: "email_not_configured" }, { status: 500 });
+    return NextResponse.json(
+      { error: "email_not_configured", detail: "RESEND_API_KEY is not set" },
+      { status: 500 }
+    );
   }
 
   const resend = new Resend(apiKey);
@@ -80,12 +83,19 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return NextResponse.json({ error: "send_failed" }, { status: 502 });
+      // TEMPORARY: surfacing the raw Resend error to the browser to make
+      // diagnosing the current setup issue easier. Remove `detail` once
+      // sending is confirmed working.
+      return NextResponse.json(
+        { error: "send_failed", detail: JSON.stringify(error) },
+        { status: 502 }
+      );
     }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Unexpected error sending email:", err);
-    return NextResponse.json({ error: "send_failed" }, { status: 500 });
+    const detail = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: "send_failed", detail }, { status: 500 });
   }
 }
