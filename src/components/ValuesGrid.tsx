@@ -1,16 +1,21 @@
 "use client";
 
 import { Ruler, ChatCircleText, Leaf, Handshake } from "@phosphor-icons/react/dist/ssr";
-import { values } from "@/lib/data";
+import { valuesMeta } from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 import IconCardGrid from "./IconCardGrid";
 
 const icons = { Ruler, ChatCircleText, Leaf, Handshake };
 
-export default function ValuesGrid() {
-  const items = values.map((value) => ({
+export default function ValuesGrid({
+  dict,
+}: {
+  dict: Dictionary["about"]["values"]["items"];
+}) {
+  const items = valuesMeta.map((value) => ({
     icon: icons[value.icon as keyof typeof icons],
-    title: value.title,
-    copy: value.copy,
+    title: dict[value.key].title,
+    copy: dict[value.key].copy,
   }));
 
   return <IconCardGrid items={items} columns={4} />;

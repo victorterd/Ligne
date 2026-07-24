@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
+import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "./globals.css";
+import { locales, hasLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
+import "../globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,26 +19,31 @@ const fraunces = Fraunces({
   style: ["italic"],
 });
 
-export const metadata: Metadata = {
-  title: "Ligne Verticale — Construcții și renovări premium",
-  description:
-    "Ligne Verticale construiește și renovează case și spații comerciale cu precizie arhitecturală: construcții noi, renovări complete și amenajări interioare.",
-};
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(locale)) notFound();
+
+  const dict = await getDictionary(locale);
+
   return (
     <html
-      lang="ro"
+      lang={locale}
       className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans">
-        <Navbar />
+        <Navbar locale={locale} dict={dict.nav} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer locale={locale} dict={dict} />
       </body>
     </html>
   );

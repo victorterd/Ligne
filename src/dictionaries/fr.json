@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ligne Verticale — Construction et rénovation haut de gamme",
+      "description": "Ligne Verticale construit et rénove maisons et espaces commerciaux avec une précision architecturale : constructions neuves, rénovations complètes et aménagements intérieurs."
+    },
+    "projects": {
+      "title": "Projets — Ligne Verticale",
+      "description": "Une sélection des constructions, rénovations et aménagements réalisés par Ligne Verticale."
+    },
+    "about": {
+      "title": "À propos — Ligne Verticale",
+      "description": "L'histoire, les valeurs et l'équipe derrière Ligne Verticale — construction et rénovation avec une précision architecturale."
+    },
+    "contact": {
+      "title": "Contact — Ligne Verticale",
+      "description": "Écrivez-nous à propos de votre projet de construction, rénovation ou aménagement intérieur."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Nous contacter"
+  },
+  "hero": {
+    "eyebrow": "Construction & rénovation haut de gamme",
+    "titleLine1": "Des espaces pensés jusqu'au",
+    "titleAccent": "moindre détail",
+    "subtitle": "De la structure aux finitions, l'équipe Ligne Verticale mène chaque chantier jusqu'à son achèvement — constructions neuves, rénovations complètes et aménagements intérieurs.",
+    "ctaPrimary": "Démarrer votre projet",
+    "ctaSecondary": "Voir nos projets",
+    "scroll": "Défiler"
+  },
+  "stats": [
+    { "value": "120+", "label": "Projets réalisés" },
+    { "value": "15 ans", "label": "D'expérience de chantier" },
+    { "value": "40+", "label": "Spécialistes dans l'équipe" },
+    { "value": "98%", "label": "Clients satisfaits" }
+  ],
+  "intro": {
+    "headingMain": "Notre nom vient d'une seule idée : une ligne verticale bien tracée porte tout l'édifice.",
+    "headingSoft": "Nous appliquons la même rigueur à chaque projet — du coulage des fondations à la dernière prise posée.",
+    "tagNumber": "01",
+    "tagLabel": "La philosophie derrière chaque chantier Ligne Verticale"
+  },
+  "services": {
+    "heading": "Ce que nous construisons",
+    "subtitle": "Quatre métiers, une seule équipe — du premier plan à la dernière couche de peinture.",
+    "items": {
+      "constructii": {
+        "title": "Constructions neuves",
+        "copy": "Nous élevons maisons et bâtiments des fondations à la toiture, avec des structures solides et une exécution irréprochable."
+      },
+      "renovari": {
+        "title": "Rénovations complètes",
+        "copy": "Nous transformons des espaces vieillissants en logements modernes, sobres en énergie et pleins de caractère."
+      },
+      "amenajari": {
+        "title": "Aménagement intérieur",
+        "copy": "Nous concevons et aménageons des intérieurs qui allient confort quotidien et esthétique raffinée."
+      },
+      "consultanta": {
+        "title": "Conseil & conception",
+        "copy": "Nous vous accompagnons du premier croquis au plan technique final, avec des solutions adaptées à votre budget."
+      }
+    }
+  },
+  "projectsShowcase": {
+    "eyebrow": "Une sélection de réalisations",
+    "heading": "Projets récents",
+    "viewAll": "Voir tous les projets"
+  },
+  "projectsPage": {
+    "eyebrow": "Projets",
+    "heading": "Chaque projet a sa propre histoire de chantier.",
+    "subtitle": "De structures bâties depuis les fondations aux rénovations complètes et aménagements intérieurs — une sélection des réalisations récentes de Ligne Verticale.",
+    "filters": {
+      "all": "Tous",
+      "construction": "Constructions",
+      "renovation": "Rénovations",
+      "interiorDesign": "Aménagements intérieurs",
+      "exteriorDesign": "Aménagements extérieurs"
+    },
+    "empty": "Nous n'avons pas encore de projet dans cette catégorie."
+  },
+  "projects": {
+    "vila-cu-terasa-suspendata": {
+      "title": "Villa à terrasse suspendue",
+      "category": "Construction résidentielle"
+    },
+    "bucatarie-in-tonuri-de-negru": {
+      "title": "Cuisine tons noirs",
+      "category": "Rénovation intérieure"
+    },
+    "living-cu-accente-de-cupru": {
+      "title": "Salon aux accents cuivrés",
+      "category": "Aménagement intérieur"
+    },
+    "fatada-imbracata-in-lemn": {
+      "title": "Façade habillée de bois",
+      "category": "Construction résidentielle"
+    },
+    "bucatarie-cu-blat-din-marmura": {
+      "title": "Cuisine au plan de travail en marbre",
+      "category": "Rénovation intérieure"
+    },
+    "casa-cu-gradina-interioara": {
+      "title": "Maison avec jardin intérieur",
+      "category": "Aménagement extérieur"
+    }
+  },
+  "cta": {
+    "heading": "Un projet en tête ?",
+    "subtitle": "Parlez-nous de votre maison ou de votre espace — nous revenons vers vous sous 48 heures avec une estimation et un plan de démarrage.",
+    "button": "Discutons-en"
+  },
+  "footer": {
+    "tagline": "Construction et rénovation avec une précision architecturale — maisons, intérieurs et espaces commerciaux, conçus pour durer.",
+    "pages": "Pages",
+    "services": "Services",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés.",
+    "madeWith": "Construit avec soin, dans le moindre détail."
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "À propos",
+      "heading": "Nous construisons depuis plus de 15 ans, avec la même obsession du détail.",
+      "subtitle": "Ligne Verticale est née d'une petite équipe d'ingénieurs et d'architectes convaincus qu'un chantier bien mené se voit dans chaque ligne du bâtiment fini. Aujourd'hui, nous menons des projets résidentiels et commerciaux dans tout le pays, avec la même attention portée au détail, du premier croquis à la remise des clés."
+    },
+    "values": {
+      "heading": "Ce qui nous guide sur chantier",
+      "subtitle": "Quatre principes que nous ne négocions pas, quelle que soit la taille du projet.",
+      "items": {
+        "precizie": {
+          "title": "Précision",
+          "copy": "Chaque cote, chaque assemblage compte. Nous vérifions deux fois ce que d'autres ne vérifient qu'une fois."
+        },
+        "transparenta": {
+          "title": "Transparence",
+          "copy": "Budgets clairs, délais réalistes et comptes rendus de chantier réguliers — sans surprise à la fin des travaux."
+        },
+        "sustenabilitate": {
+          "title": "Durabilité",
+          "copy": "Nous choisissons des matériaux et des solutions énergétiques qui réduisent les coûts sur le long terme, pas seulement sur le papier."
+        },
+        "parteneriat": {
+          "title": "Partenariat durable",
+          "copy": "Nous restons aux côtés de nos clients après la réception des travaux, pour l'entretien et les extensions futures."
+        }
+      }
+    },
+    "process": {
+      "heading": "Notre méthode de travail",
+      "subtitle": "Quatre étapes, un seul chef de projet du premier appel à la réception finale.",
+      "steps": {
+        "consultanta": {
+          "title": "Consultation",
+          "copy": "Nous discutons du terrain, du budget et de votre vision, et fixons un plan réaliste dès le premier rendez-vous."
+        },
+        "proiectare": {
+          "title": "Conception",
+          "copy": "Notre équipe d'architectes transforme l'idée en un projet technique complet, validé et prêt pour l'exécution."
+        },
+        "executie": {
+          "title": "Exécution",
+          "copy": "Nos équipes de chantier travaillent selon le planning, avec des contrôles qualité à chaque étape des travaux."
+        },
+        "predare": {
+          "title": "Réception & entretien",
+          "copy": "Nous livrons un ouvrage clé en main et restons disponibles pour la garantie, le service et l'entretien."
+        }
+      }
+    },
+    "departments": {
+      "heading": "L'équipe derrière chaque chantier",
+      "subtitle": "Quatre départements qui travaillent en synchronisation, pour qu'aucun détail ne soit laissé au hasard.",
+      "items": {
+        "arhitectura": {
+          "title": "Architecture & Design",
+          "copy": "Transforme les idées en plans clairs, avec des solutions spatiales adaptées à chaque terrain et à chaque budget."
+        },
+        "inginerie": {
+          "title": "Ingénierie structurelle",
+          "copy": "Calcule et vérifie chaque structure, des fondations jusqu'au moindre élément de toiture."
+        },
+        "executie": {
+          "title": "Exécution de chantier",
+          "copy": "Des chefs de chantier et des équipes expérimentés, présents chaque jour, coordonnés par un seul responsable."
+        },
+        "management": {
+          "title": "Gestion de projet",
+          "copy": "Coordonne les délais, les fournisseurs et les budgets, de la signature du contrat à la réception finale."
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heading": "Parlons de votre projet.",
+    "subtitle": "Remplissez le formulaire ou écrivez-nous directement — nous répondons sous 48 heures avec une estimation et un plan de démarrage.",
+    "form": {
+      "name": "Nom complet *",
+      "email": "Email *",
+      "phone": "Téléphone",
+      "projectType": "Type de projet",
+      "message": "Message *",
+      "namePlaceholder": "Claire Dubois",
+      "emailPlaceholder": "claire@exemple.fr",
+      "phonePlaceholder": "06 xx xx xx xx",
+      "messagePlaceholder": "Dites-nous quelques mots sur le terrain, le budget et le délai souhaité.",
+      "submit": "Envoyer le message",
+      "note": "Ceci ouvre votre application email, avec le message pré-rempli.",
+      "success": "Votre application email s'est ouverte dans un nouvel onglet — cliquez sur « Envoyer » pour nous contacter.",
+      "projectTypes": ["Construction neuve", "Rénovation", "Aménagement intérieur", "Autre"]
+    },
+    "hours": {
+      "weekdays": "Lundi – Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche",
+      "closed": "Fermé"
+    }
+  }
+}

@@ -5,14 +5,29 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
-import { navLinks } from "@/lib/data";
+import type { Locale } from "@/i18n/config";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Navbar() {
+type NavDict = {
+  home: string;
+  projects: string;
+  about: string;
+  contact: string;
+  cta: string;
+};
+
+export default function Navbar({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: NavDict;
+}) {
   const pathname = usePathname();
   const [scrolledState, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
-  const forceSolid = pathname !== "/";
+  const forceSolid = pathname !== `/${locale}`;
   const scrolled = scrolledState || forceSolid;
 
   if (pathname !== prevPathname) {
@@ -27,6 +42,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const navLinks = [
+    { href: `/${locale}`, label: dict.home },
+    { href: `/${locale}/proiecte`, label: dict.projects },
+    { href: `/${locale}/despre-noi`, label: dict.about },
+    { href: `/${locale}/contact`, label: dict.contact },
+  ];
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:px-6 sm:pt-5">
       <motion.div
@@ -40,7 +62,7 @@ export default function Navbar() {
         }`}
       >
         <Link
-          href="/"
+          href={`/${locale}`}
           className={`flex items-center gap-2 text-[0.95rem] font-semibold tracking-tight transition-colors ${
             scrolled || open ? "text-ink" : "text-white"
           }`}
@@ -87,22 +109,25 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <div className="hidden sm:block">
+            <LanguageSwitcher locale={locale} dark={!(scrolled || open)} />
+          </div>
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className={`hidden items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors sm:inline-flex ${
               scrolled || open
                 ? "bg-ink text-paper hover:bg-accent-ink"
                 : "bg-white text-ink hover:bg-white/90"
             }`}
           >
-            Contactează-ne
+            {dict.cta}
             <ArrowUpRight size={15} weight="bold" />
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Închide meniul" : "Deschide meniul"}
+            aria-label={open ? "Close menu" : "Open menu"}
             className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors md:hidden ${
               scrolled || open ? "text-ink" : "text-white"
             }`}
@@ -136,12 +161,15 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="mt-2 flex items-center justify-center gap-1.5 rounded-xl bg-ink px-4 py-3 text-base font-medium text-paper"
               >
-                Contactează-ne
+                {dict.cta}
                 <ArrowUpRight size={16} weight="bold" />
               </Link>
+              <div className="mt-3 flex justify-center border-t border-line pt-3">
+                <LanguageSwitcher locale={locale} />
+              </div>
             </nav>
           </motion.div>
         )}

@@ -5,9 +5,19 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
-import { projects } from "@/lib/data";
+import { projectsMeta } from "@/lib/data";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export default function ProjectsShowcase() {
+export default function ProjectsShowcase({
+  locale,
+  dict,
+  projectsDict,
+}: {
+  locale: Locale;
+  dict: Dictionary["projectsShowcase"];
+  projectsDict: Dictionary["projects"];
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [active, setActive] = useState(0);
@@ -53,7 +63,7 @@ export default function ProjectsShowcase() {
               transition={{ duration: 0.6 }}
               className="text-xs font-medium uppercase tracking-[0.28em] text-white/50"
             >
-              Selecție de lucrări
+              {dict.eyebrow}
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -62,19 +72,19 @@ export default function ProjectsShowcase() {
               transition={{ duration: 0.7, delay: 0.05 }}
               className="mt-3 text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium tracking-tight"
             >
-              Proiecte recente
+              {dict.heading}
             </motion.h2>
           </div>
 
           <div className="flex items-center gap-4">
             <span className="font-display text-lg text-white/50">
               {String(active + 1).padStart(2, "0")} /{" "}
-              {String(projects.length).padStart(2, "0")}
+              {String(projectsMeta.length).padStart(2, "0")}
             </span>
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                aria-label="Proiectul anterior"
+                aria-label="Previous project"
                 onClick={() => scrollToIndex(Math.max(0, active - 1))}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-white/50 hover:bg-white/10 disabled:opacity-30"
                 disabled={active === 0}
@@ -83,12 +93,12 @@ export default function ProjectsShowcase() {
               </button>
               <button
                 type="button"
-                aria-label="Proiectul următor"
+                aria-label="Next project"
                 onClick={() =>
-                  scrollToIndex(Math.min(projects.length - 1, active + 1))
+                  scrollToIndex(Math.min(projectsMeta.length - 1, active + 1))
                 }
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-white/50 hover:bg-white/10 disabled:opacity-30"
-                disabled={active === projects.length - 1}
+                disabled={active === projectsMeta.length - 1}
               >
                 <ArrowRight size={17} />
               </button>
@@ -100,7 +110,7 @@ export default function ProjectsShowcase() {
           ref={trackRef}
           className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4"
         >
-          {projects.map((project, i) => (
+          {projectsMeta.map((project, i) => (
             <div
               key={project.slug}
               ref={(el) => {
@@ -115,12 +125,12 @@ export default function ProjectsShowcase() {
               }}
             >
               <Link
-                href="/proiecte"
+                href={`/${locale}/proiecte`}
                 className="relative block aspect-[4/5] w-full sm:aspect-[3/4]"
               >
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={projectsDict[project.slug].title}
                   fill
                   sizes="(max-width: 640px) 80vw, 560px"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
@@ -133,10 +143,10 @@ export default function ProjectsShowcase() {
 
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">
-                    {project.category}
+                    {projectsDict[project.slug].category}
                   </p>
                   <h3 className="mt-2 text-xl font-medium tracking-tight text-white">
-                    {project.title}
+                    {projectsDict[project.slug].title}
                   </h3>
                   <p className="mt-1 text-sm text-white/60">
                     {project.location} — {project.year}
@@ -155,10 +165,10 @@ export default function ProjectsShowcase() {
           className="mt-10 flex justify-center sm:justify-start"
         >
           <Link
-            href="/proiecte"
+            href={`/${locale}/proiecte`}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-white/50 hover:bg-white/10"
           >
-            Vezi toate proiectele
+            {dict.viewAll}
             <ArrowUpRight size={15} />
           </Link>
         </motion.div>

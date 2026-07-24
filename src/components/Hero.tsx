@@ -4,16 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowDown } from "@phosphor-icons/react/dist/ssr";
-import { stats } from "@/lib/data";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export default function Hero() {
+export default function Hero({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
+  const { hero, stats } = dict;
+
   return (
     <section className="relative flex min-h-[100dvh] flex-col overflow-hidden bg-ink">
       <Image
         src="/images/hero-villa.jpg"
-        alt="Vilă modernă construită de Ligne Verticale, cu fațadă de sticlă și beton"
+        alt="Modern villa built by Ligne Verticale, with a glass and concrete façade"
         fill
         priority
         sizes="100vw"
@@ -30,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1, ease }}
             className="text-xs font-medium uppercase tracking-[0.28em] text-white/70"
           >
-            Construcții &amp; renovări premium
+            {hero.eyebrow}
           </motion.p>
 
           <motion.h1
@@ -39,9 +48,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease }}
             className="mt-5 max-w-3xl text-[clamp(2.5rem,7vw,5.25rem)] font-medium leading-[1.03] tracking-tight text-white"
           >
-            Spații gândite până la{" "}
+            {hero.titleLine1}{" "}
             <em className="font-display font-normal italic text-accent-soft">
-              ultimul detaliu
+              {hero.titleAccent}
             </em>
             .
           </motion.h1>
@@ -52,9 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.35, ease }}
             className="mt-6 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg"
           >
-            De la structură la finisaj, echipa Ligne Verticale transformă
-            fiecare șantier într-un proiect arhitectural dus la desăvârșire —
-            construcții noi, renovări complete și amenajări interioare.
+            {hero.subtitle}
           </motion.p>
 
           <motion.div
@@ -64,19 +71,19 @@ export default function Hero() {
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="group inline-flex items-center gap-2 rounded-full bg-white py-3 pl-5 pr-3 text-sm font-medium text-ink transition-transform duration-300 hover:scale-[1.03]"
             >
-              Începe proiectul
+              {hero.ctaPrimary}
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-ink text-white transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight size={14} weight="bold" />
               </span>
             </Link>
             <Link
-              href="/proiecte"
+              href={`/${locale}/proiecte`}
               className="text-sm font-medium text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline"
             >
-              Vezi proiectele noastre
+              {hero.ctaSecondary}
             </Link>
           </motion.div>
         </div>
@@ -106,10 +113,10 @@ export default function Hero() {
                 behavior: "smooth",
               })
             }
-            aria-label="Derulează în jos"
+            aria-label={hero.scroll}
             className="absolute -top-14 left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs text-white/80 backdrop-blur-md transition-colors hover:bg-white/20 sm:flex"
           >
-            Derulează
+            {hero.scroll}
             <ArrowDown size={13} />
           </button>
         </motion.div>

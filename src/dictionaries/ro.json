@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ligne Verticale — Construcții și renovări premium",
+      "description": "Ligne Verticale construiește și renovează case și spații comerciale cu precizie arhitecturală: construcții noi, renovări complete și amenajări interioare."
+    },
+    "projects": {
+      "title": "Proiecte — Ligne Verticale",
+      "description": "O selecție din construcțiile, renovările și amenajările realizate de Ligne Verticale."
+    },
+    "about": {
+      "title": "Despre noi — Ligne Verticale",
+      "description": "Povestea, valorile și echipa din spatele Ligne Verticale — construcții și renovări cu precizie arhitecturală."
+    },
+    "contact": {
+      "title": "Contact — Ligne Verticale",
+      "description": "Scrie-ne despre proiectul tău de construcție, renovare sau amenajare interioară."
+    }
+  },
+  "nav": {
+    "home": "Acasă",
+    "projects": "Proiecte",
+    "about": "Despre noi",
+    "contact": "Contact",
+    "cta": "Contactează-ne"
+  },
+  "hero": {
+    "eyebrow": "Construcții & renovări premium",
+    "titleLine1": "Spații gândite până la",
+    "titleAccent": "ultimul detaliu",
+    "subtitle": "De la structură la finisaj, echipa Ligne Verticale transformă fiecare șantier într-un proiect arhitectural dus la desăvârșire — construcții noi, renovări complete și amenajări interioare.",
+    "ctaPrimary": "Începe proiectul",
+    "ctaSecondary": "Vezi proiectele noastre",
+    "scroll": "Derulează"
+  },
+  "stats": [
+    { "value": "120+", "label": "Proiecte finalizate" },
+    { "value": "15 ani", "label": "Experiență pe șantier" },
+    { "value": "40+", "label": "Specialiști în echipă" },
+    { "value": "98%", "label": "Clienți mulțumiți" }
+  ],
+  "intro": {
+    "headingMain": "Numele nostru vine de la o singură idee: o linie verticală bine trasată ține în picioare toată clădirea.",
+    "headingSoft": "Aplicăm aceeași disciplină în fiecare proiect — de la turnarea fundației până la ultima priză montată.",
+    "tagNumber": "01",
+    "tagLabel": "Filosofia din spatele fiecărui șantier Ligne Verticale"
+  },
+  "services": {
+    "heading": "Ce construim",
+    "subtitle": "Patru servicii, o singură echipă — de la primul plan până la ultimul strat de vopsea.",
+    "items": {
+      "constructii": {
+        "title": "Construcții noi",
+        "copy": "Ridicăm case și clădiri de la fundație până la acoperiș, cu structuri solide și execuție ireproșabilă."
+      },
+      "renovari": {
+        "title": "Renovări complete",
+        "copy": "Transformăm spații vechi și obosite în locuințe moderne, eficiente energetic și pline de personalitate."
+      },
+      "amenajari": {
+        "title": "Amenajări interioare",
+        "copy": "Proiectăm și amenajăm interioare care îmbină funcționalitatea zilnică cu o estetică rafinată."
+      },
+      "consultanta": {
+        "title": "Consultanță & proiectare",
+        "copy": "Te ghidăm de la prima schiță până la planul tehnic final, cu soluții adaptate bugetului tău."
+      }
+    }
+  },
+  "projectsShowcase": {
+    "eyebrow": "Selecție de lucrări",
+    "heading": "Proiecte recente",
+    "viewAll": "Vezi toate proiectele"
+  },
+  "projectsPage": {
+    "eyebrow": "Proiecte",
+    "heading": "Fiecare proiect are propria poveste de șantier.",
+    "subtitle": "De la structuri ridicate de la zero, până la renovări complete și amenajări de interior — o selecție din lucrările Ligne Verticale din ultimii ani.",
+    "filters": {
+      "all": "Toate",
+      "construction": "Construcții",
+      "renovation": "Renovări",
+      "interiorDesign": "Amenajări interioare",
+      "exteriorDesign": "Amenajări exterioare"
+    },
+    "empty": "Nu avem încă proiecte în această categorie."
+  },
+  "projects": {
+    "vila-cu-terasa-suspendata": {
+      "title": "Vilă cu terasă suspendată",
+      "category": "Construcție rezidențială"
+    },
+    "bucatarie-in-tonuri-de-negru": {
+      "title": "Bucătărie în tonuri de negru",
+      "category": "Renovare interioară"
+    },
+    "living-cu-accente-de-cupru": {
+      "title": "Living cu accente de cupru",
+      "category": "Amenajare interioară"
+    },
+    "fatada-imbracata-in-lemn": {
+      "title": "Fațadă îmbrăcată în lemn",
+      "category": "Construcție rezidențială"
+    },
+    "bucatarie-cu-blat-din-marmura": {
+      "title": "Bucătărie cu blat din marmură",
+      "category": "Renovare interioară"
+    },
+    "casa-cu-gradina-interioara": {
+      "title": "Casă cu grădină interioară",
+      "category": "Amenajare exterioară"
+    }
+  },
+  "cta": {
+    "heading": "Ai un proiect în minte?",
+    "subtitle": "Spune-ne despre casa sau spațiul tău — revenim în cel mult 48 de ore cu o estimare și un plan de start.",
+    "button": "Hai să discutăm"
+  },
+  "footer": {
+    "tagline": "Construcții și renovări cu precizie arhitecturală — case, interioare și spații comerciale, gândite să dureze.",
+    "pages": "Pagini",
+    "services": "Servicii",
+    "contact": "Contact",
+    "copyright": "Toate drepturile rezervate.",
+    "madeWith": "Construit cu grijă pentru fiecare detaliu."
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Despre noi",
+      "heading": "Construim de peste 15 ani, cu aceeași obsesie pentru detaliu.",
+      "subtitle": "Ligne Verticale a pornit de la o echipă mică de ingineri și arhitecți care credeau că un șantier bine condus se vede în fiecare linie a clădirii finite. Astăzi coordonăm proiecte rezidențiale și comerciale în toată țara, păstrând aceeași atenție pentru detaliu de la prima schiță până la ultima cheie predată."
+    },
+    "values": {
+      "heading": "Ce ne ghidează pe șantier",
+      "subtitle": "Patru principii pe care nu le negociem, indiferent de mărimea proiectului.",
+      "items": {
+        "precizie": {
+          "title": "Precizie",
+          "copy": "Fiecare cotă și fiecare îmbinare contează. Verificăm de două ori ce alții verifică o singură dată."
+        },
+        "transparenta": {
+          "title": "Transparență",
+          "copy": "Bugete clare, termene realiste și rapoarte constante de șantier — fără surprize la final de lucrare."
+        },
+        "sustenabilitate": {
+          "title": "Sustenabilitate",
+          "copy": "Alegem materiale și soluții energetice care reduc costurile pe termen lung, nu doar pe hârtie."
+        },
+        "parteneriat": {
+          "title": "Parteneriat pe termen lung",
+          "copy": "Rămânem alături de clienți și după recepția lucrării, pentru mentenanță și extinderi ulterioare."
+        }
+      }
+    },
+    "process": {
+      "heading": "Cum lucrăm",
+      "subtitle": "Patru etape, un singur responsabil de proiect de la primul telefon până la recepția finală.",
+      "steps": {
+        "consultanta": {
+          "title": "Consultanță",
+          "copy": "Discutăm despre teren, buget și viziunea ta și stabilim un plan realist încă din prima întâlnire."
+        },
+        "proiectare": {
+          "title": "Proiectare",
+          "copy": "Echipa de arhitecți transformă ideea într-un proiect tehnic complet, avizat și pregătit de execuție."
+        },
+        "executie": {
+          "title": "Execuție",
+          "copy": "Echipele de șantier lucrează după grafic, cu verificări de calitate la fiecare etapă a lucrării."
+        },
+        "predare": {
+          "title": "Predare & mentenanță",
+          "copy": "Predăm lucrarea la cheie și rămânem disponibili pentru garanție, service și mentenanță."
+        }
+      }
+    },
+    "departments": {
+      "heading": "Echipa din spatele fiecărui șantier",
+      "subtitle": "Patru departamente care lucrează sincronizat, pentru ca niciun detaliu să nu rămână la voia întâmplării.",
+      "items": {
+        "arhitectura": {
+          "title": "Arhitectură & Design",
+          "copy": "Transformă ideile în planuri clare, cu soluții spațiale potrivite fiecărui teren și buget."
+        },
+        "inginerie": {
+          "title": "Inginerie structurală",
+          "copy": "Calculează și verifică fiecare structură, de la fundație până la ultimul element de acoperiș."
+        },
+        "executie": {
+          "title": "Execuție pe șantier",
+          "copy": "Maiștri și echipe cu experiență, prezenți zilnic pe șantier, coordonați de un singur responsabil."
+        },
+        "management": {
+          "title": "Project management",
+          "copy": "Coordonează termene, furnizori și bugete, de la semnarea contractului până la recepția finală."
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heading": "Hai să vorbim despre proiectul tău.",
+    "subtitle": "Completează formularul sau scrie-ne direct — răspundem în cel mult 48 de ore cu o estimare și un plan de start.",
+    "form": {
+      "name": "Nume complet *",
+      "email": "Email *",
+      "phone": "Telefon",
+      "projectType": "Tip proiect",
+      "message": "Mesaj *",
+      "namePlaceholder": "Ana Popescu",
+      "emailPlaceholder": "ana@exemplu.ro",
+      "phonePlaceholder": "07xx xxx xxx",
+      "messagePlaceholder": "Spune-ne câteva cuvinte despre teren, buget și termenul dorit.",
+      "submit": "Trimite mesajul",
+      "note": "Se deschide aplicația ta de email, cu mesajul precompletat.",
+      "success": "Aplicația de email s-a deschis într-o filă nouă — apasă „Trimite” acolo pentru a ne contacta.",
+      "projectTypes": ["Construcție nouă", "Renovare", "Amenajare interioară", "Altele"]
+    },
+    "hours": {
+      "weekdays": "Luni – Vineri",
+      "saturday": "Sâmbătă",
+      "sunday": "Duminică",
+      "closed": "Închis"
+    }
+  }
+}

@@ -2,12 +2,17 @@
 
 import { useState, type FormEvent } from "react";
 import { PaperPlaneTilt, CheckCircle } from "@phosphor-icons/react/dist/ssr";
-import { contactInfo, projectTypes } from "@/lib/data";
+import { contactInfo } from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const inputClass =
   "w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink placeholder:text-ink-soft/50 outline-none transition-colors focus:border-accent";
 
-export default function ContactForm() {
+export default function ContactForm({
+  dict,
+}: {
+  dict: Dictionary["contactPage"]["form"];
+}) {
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -21,10 +26,10 @@ export default function ContactForm() {
     const message = String(data.get("message") ?? "");
 
     const body = [
-      `Nume: ${name}`,
-      `Email: ${email}`,
-      phone && `Telefon: ${phone}`,
-      `Tip proiect: ${projectType}`,
+      `${dict.name.replace(" *", "")}: ${name}`,
+      `${dict.email.replace(" *", "")}: ${email}`,
+      phone && `${dict.phone}: ${phone}`,
+      `${dict.projectType}: ${projectType}`,
       "",
       message,
     ]
@@ -32,7 +37,7 @@ export default function ContactForm() {
       .join("\n");
 
     const mailto = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
-      `Proiect nou — ${name || "Site Ligne Verticale"}`
+      `${name || "Ligne Verticale"}`
     )}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailto;
@@ -43,22 +48,22 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-ink">Nume complet *</span>
+          <span className="text-sm font-medium text-ink">{dict.name}</span>
           <input
             required
             name="name"
             type="text"
-            placeholder="Ana Popescu"
+            placeholder={dict.namePlaceholder}
             className={inputClass}
           />
         </label>
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-ink">Email *</span>
+          <span className="text-sm font-medium text-ink">{dict.email}</span>
           <input
             required
             name="email"
             type="email"
-            placeholder="ana@exemplu.ro"
+            placeholder={dict.emailPlaceholder}
             className={inputClass}
           />
         </label>
@@ -66,18 +71,24 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-ink">Telefon</span>
+          <span className="text-sm font-medium text-ink">{dict.phone}</span>
           <input
             name="phone"
             type="tel"
-            placeholder="07xx xxx xxx"
+            placeholder={dict.phonePlaceholder}
             className={inputClass}
           />
         </label>
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-ink">Tip proiect</span>
-          <select name="projectType" className={inputClass} defaultValue={projectTypes[0]}>
-            {projectTypes.map((type) => (
+          <span className="text-sm font-medium text-ink">
+            {dict.projectType}
+          </span>
+          <select
+            name="projectType"
+            className={inputClass}
+            defaultValue={dict.projectTypes[0]}
+          >
+            {dict.projectTypes.map((type) => (
               <option key={type} value={type}>
                 {type}
               </option>
@@ -87,12 +98,12 @@ export default function ContactForm() {
       </div>
 
       <label className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-ink">Mesaj *</span>
+        <span className="text-sm font-medium text-ink">{dict.message}</span>
         <textarea
           required
           name="message"
           rows={5}
-          placeholder="Spune-ne câteva cuvinte despre teren, buget și termenul dorit."
+          placeholder={dict.messagePlaceholder}
           className={`${inputClass} resize-none`}
         />
       </label>
@@ -102,21 +113,18 @@ export default function ContactForm() {
           type="submit"
           className="group inline-flex items-center gap-2 rounded-full bg-ink py-3 pl-5 pr-3 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03]"
         >
-          Trimite mesajul
+          {dict.submit}
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-white transition-transform duration-300 group-hover:rotate-6">
             <PaperPlaneTilt size={14} weight="bold" />
           </span>
         </button>
-        <p className="text-xs text-ink-soft">
-          Se deschide aplicația ta de email, cu mesajul precompletat.
-        </p>
+        <p className="text-xs text-ink-soft">{dict.note}</p>
       </div>
 
       {sent && (
         <p className="flex items-center gap-2 text-sm text-accent">
           <CheckCircle size={16} weight="fill" />
-          Aplicația de email s-a deschis într-o filă nouă — apasă
-          &bdquo;Trimite&rdquo; acolo pentru a ne contacta.
+          {dict.success}
         </p>
       )}
     </form>

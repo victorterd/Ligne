@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import {
   Phone,
   EnvelopeSimple,
@@ -12,40 +13,53 @@ import {
 import { contactInfo } from "@/lib/data";
 import ContactForm from "@/components/ContactForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import { hasLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Contact — Ligne Verticale",
-  description:
-    "Scrie-ne despre proiectul tău de construcție, renovare sau amenajare interioară.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(locale)) return {};
+  const dict = await getDictionary(locale);
+  return dict.meta.contact;
+}
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(locale)) notFound();
+  const dict = await getDictionary(locale);
+  const { contactPage } = dict;
+
   return (
     <section className="px-4 pb-24 pt-32 sm:px-6 sm:pb-32 sm:pt-40 lg:px-10">
       <div className="mx-auto max-w-6xl">
         <AnimatedSection className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.28em] text-accent">
-            Contact
+            {contactPage.eyebrow}
           </p>
           <h1 className="mt-5 text-[clamp(2rem,4.5vw,3.25rem)] font-medium leading-[1.1] tracking-tight text-ink">
-            Hai să vorbim despre proiectul tău.
+            {contactPage.heading}
           </h1>
-          <p className="mt-5 text-ink-soft">
-            Completează formularul sau scrie-ne direct — răspundem în cel mult
-            48 de ore cu o estimare și un plan de start.
-          </p>
+          <p className="mt-5 text-ink-soft">{contactPage.subtitle}</p>
         </AnimatedSection>
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <AnimatedSection delay={0.1}>
-            <ContactForm />
+            <ContactForm dict={contactPage.form} />
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="flex flex-col gap-6">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
                 src="/images/project-house-garden.jpg"
-                alt="Curte amenajată de Ligne Verticale, cu grădină și terasă de beton"
+                alt="Outdoor courtyard designed by Ligne Verticale, with garden and concrete terrace"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
@@ -88,9 +102,11 @@ export default function ContactPage() {
                 <Clock size={16} className="mt-0.5 shrink-0" />
                 <ul className="flex flex-col gap-1">
                   {contactInfo.hours.map((h) => (
-                    <li key={h.label} className="flex gap-2">
-                      <span className="text-ink">{h.label}:</span>
-                      {h.value}
+                    <li key={h.key} className="flex gap-2">
+                      <span className="text-ink">
+                        {contactPage.hours[h.key]}:
+                      </span>
+                      {h.value ?? contactPage.hours.closed}
                     </li>
                   ))}
                 </ul>
@@ -101,7 +117,7 @@ export default function ContactPage() {
                   <a
                     key={i}
                     href="#"
-                    aria-label="Rețea socială"
+                    aria-label="Social network"
                     className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
                   >
                     <Icon size={16} />

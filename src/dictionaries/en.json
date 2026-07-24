@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ligne Verticale — Premium construction & renovation",
+      "description": "Ligne Verticale builds and renovates homes and commercial spaces with architectural precision: new construction, full renovations and interior design."
+    },
+    "projects": {
+      "title": "Projects — Ligne Verticale",
+      "description": "A selection of the construction, renovation and interior design work completed by Ligne Verticale."
+    },
+    "about": {
+      "title": "About us — Ligne Verticale",
+      "description": "The story, values and team behind Ligne Verticale — construction and renovation with architectural precision."
+    },
+    "contact": {
+      "title": "Contact — Ligne Verticale",
+      "description": "Write to us about your construction, renovation or interior design project."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Contact us"
+  },
+  "hero": {
+    "eyebrow": "Premium construction & renovation",
+    "titleLine1": "Spaces designed down to",
+    "titleAccent": "the last detail",
+    "subtitle": "From structure to finish, the Ligne Verticale team carries every site through to completion — new builds, full renovations, and interior fit-outs.",
+    "ctaPrimary": "Start your project",
+    "ctaSecondary": "See our projects",
+    "scroll": "Scroll"
+  },
+  "stats": [
+    { "value": "120+", "label": "Projects completed" },
+    { "value": "15 years", "label": "On-site experience" },
+    { "value": "40+", "label": "Specialists on the team" },
+    { "value": "98%", "label": "Satisfied clients" }
+  ],
+  "intro": {
+    "headingMain": "Our name comes from one idea: a well-drawn vertical line holds up the entire building.",
+    "headingSoft": "We apply the same discipline to every project — from pouring the foundation to fitting the last switch plate.",
+    "tagNumber": "01",
+    "tagLabel": "The philosophy behind every Ligne Verticale site"
+  },
+  "services": {
+    "heading": "What we build",
+    "subtitle": "Four services, one team — from the first sketch to the last coat of paint.",
+    "items": {
+      "constructii": {
+        "title": "New construction",
+        "copy": "We raise houses and buildings from the foundation to the roof, with solid structures and flawless execution."
+      },
+      "renovari": {
+        "title": "Full renovations",
+        "copy": "We turn tired, outdated spaces into modern, energy-efficient homes full of personality."
+      },
+      "amenajari": {
+        "title": "Interior design",
+        "copy": "We design and fit out interiors that balance everyday function with refined aesthetics."
+      },
+      "consultanta": {
+        "title": "Consulting & design",
+        "copy": "We guide you from the first sketch to the final technical plan, with solutions built around your budget."
+      }
+    }
+  },
+  "projectsShowcase": {
+    "eyebrow": "A selection of our work",
+    "heading": "Recent projects",
+    "viewAll": "View all projects"
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "heading": "Every project has its own story on site.",
+    "subtitle": "From structures built from the ground up to full renovations and interior fit-outs — a selection of Ligne Verticale's recent work.",
+    "filters": {
+      "all": "All",
+      "construction": "Construction",
+      "renovation": "Renovations",
+      "interiorDesign": "Interior design",
+      "exteriorDesign": "Outdoor design"
+    },
+    "empty": "We don't have any projects in this category yet."
+  },
+  "projects": {
+    "vila-cu-terasa-suspendata": {
+      "title": "Villa with a suspended terrace",
+      "category": "Residential construction"
+    },
+    "bucatarie-in-tonuri-de-negru": {
+      "title": "Kitchen in shades of black",
+      "category": "Interior renovation"
+    },
+    "living-cu-accente-de-cupru": {
+      "title": "Living room with copper accents",
+      "category": "Interior design"
+    },
+    "fatada-imbracata-in-lemn": {
+      "title": "Timber-clad façade",
+      "category": "Residential construction"
+    },
+    "bucatarie-cu-blat-din-marmura": {
+      "title": "Kitchen with a marble countertop",
+      "category": "Interior renovation"
+    },
+    "casa-cu-gradina-interioara": {
+      "title": "House with an inner garden",
+      "category": "Outdoor design"
+    }
+  },
+  "cta": {
+    "heading": "Have a project in mind?",
+    "subtitle": "Tell us about your home or space — we'll get back to you within 48 hours with an estimate and a plan to get started.",
+    "button": "Let's talk"
+  },
+  "footer": {
+    "tagline": "Construction and renovation with architectural precision — homes, interiors and commercial spaces, built to last.",
+    "pages": "Pages",
+    "services": "Services",
+    "contact": "Contact",
+    "copyright": "All rights reserved.",
+    "madeWith": "Built with care for every detail."
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About us",
+      "heading": "We've been building for over 15 years, with the same obsession for detail.",
+      "subtitle": "Ligne Verticale started with a small team of engineers and architects who believed a well-run site shows in every line of the finished building. Today we run residential and commercial projects nationwide, with the same attention to detail from the first sketch to the last key handed over."
+    },
+    "values": {
+      "heading": "What guides us on site",
+      "subtitle": "Four principles we don't compromise on, whatever the size of the project.",
+      "items": {
+        "precizie": {
+          "title": "Precision",
+          "copy": "Every measurement and every joint matters. We double-check what others check once."
+        },
+        "transparenta": {
+          "title": "Transparency",
+          "copy": "Clear budgets, realistic timelines, and steady site reports — no surprises at the end of the job."
+        },
+        "sustenabilitate": {
+          "title": "Sustainability",
+          "copy": "We choose materials and energy solutions that cut long-term costs, not just costs on paper."
+        },
+        "parteneriat": {
+          "title": "Long-term partnership",
+          "copy": "We stay by our clients' side after handover too, for maintenance and future extensions."
+        }
+      }
+    },
+    "process": {
+      "heading": "How we work",
+      "subtitle": "Four stages, one project manager from the first phone call to final handover.",
+      "steps": {
+        "consultanta": {
+          "title": "Consultation",
+          "copy": "We talk about the site, the budget and your vision, and set a realistic plan from the first meeting."
+        },
+        "proiectare": {
+          "title": "Design",
+          "copy": "Our architects turn the idea into a complete technical project, approved and ready for construction."
+        },
+        "executie": {
+          "title": "Execution",
+          "copy": "Our site teams work to schedule, with quality checks at every stage of the job."
+        },
+        "predare": {
+          "title": "Handover & maintenance",
+          "copy": "We hand over a turnkey project and stay available for warranty, service and maintenance."
+        }
+      }
+    },
+    "departments": {
+      "heading": "The team behind every site",
+      "subtitle": "Four departments working in sync, so no detail is left to chance.",
+      "items": {
+        "arhitectura": {
+          "title": "Architecture & Design",
+          "copy": "Turns ideas into clear plans, with spatial solutions suited to each site and budget."
+        },
+        "inginerie": {
+          "title": "Structural engineering",
+          "copy": "Calculates and verifies every structure, from the foundation to the last roof element."
+        },
+        "executie": {
+          "title": "Site execution",
+          "copy": "Experienced foremen and crews, on site every day, coordinated by a single lead."
+        },
+        "management": {
+          "title": "Project management",
+          "copy": "Coordinates timelines, suppliers and budgets, from signing the contract to final handover."
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk about your project.",
+    "subtitle": "Fill in the form or write to us directly — we reply within 48 hours with an estimate and a plan to get started.",
+    "form": {
+      "name": "Full name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "projectType": "Project type",
+      "message": "Message *",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "jane@example.com",
+      "phonePlaceholder": "+40 7xx xxx xxx",
+      "messagePlaceholder": "Tell us a few words about the site, budget and timeline you have in mind.",
+      "submit": "Send message",
+      "note": "This opens your email app with the message pre-filled.",
+      "success": "Your email app has opened in a new window — press “Send” there to reach us.",
+      "projectTypes": ["New construction", "Renovation", "Interior design", "Other"]
+    },
+    "hours": {
+      "weekdays": "Monday – Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed"
+    }
+  }
+}

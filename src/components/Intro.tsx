@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export default function Intro() {
+export default function Intro({ dict }: { dict: Dictionary["intro"] }) {
   return (
     <section className="bg-paper px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
       <div className="mx-auto max-w-6xl">
@@ -14,12 +15,7 @@ export default function Intro() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-medium leading-[1.15] tracking-tight text-ink"
           >
-            Numele nostru vine de la o singură idee: o linie verticală bine
-            trasată ține în picioare toată clădirea.{" "}
-            <span className="text-ink-soft">
-              Aplicăm aceeași disciplină în fiecare proiect — de la turnarea
-              fundației până la ultima priză montată.
-            </span>
+            {dict.headingMain} <span className="text-ink-soft">{dict.headingSoft}</span>
           </motion.h2>
 
           <motion.div
@@ -30,11 +26,9 @@ export default function Intro() {
             className="flex shrink-0 items-center gap-3 text-sm text-ink-soft lg:flex-col lg:items-end lg:text-right"
           >
             <span className="font-display text-4xl leading-none text-accent">
-              01
+              {dict.tagNumber}
             </span>
-            <span className="max-w-[10rem]">
-              Filosofia din spatele fiecărui șantier Ligne Verticale
-            </span>
+            <span className="max-w-[10rem]">{dict.tagLabel}</span>
           </motion.div>
         </div>
       </div>

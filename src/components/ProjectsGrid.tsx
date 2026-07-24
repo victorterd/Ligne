@@ -3,25 +3,36 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { projectFilters, projects, type ProjectType } from "@/lib/data";
+import {
+  projectFilterKeys,
+  projectsMeta,
+  type ProjectFilterKey,
+} from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export default function ProjectsGrid() {
-  const [active, setActive] = useState<ProjectType | "Toate">("Toate");
+export default function ProjectsGrid({
+  dict,
+  projectsDict,
+}: {
+  dict: Dictionary["projectsPage"];
+  projectsDict: Dictionary["projects"];
+}) {
+  const [active, setActive] = useState<ProjectFilterKey | "all">("all");
 
   const filtered = useMemo(
     () =>
-      active === "Toate"
-        ? projects
-        : projects.filter((project) => project.type === active),
+      active === "all"
+        ? projectsMeta
+        : projectsMeta.filter((project) => project.type === active),
     [active]
   );
 
   return (
     <div>
       <div className="flex flex-wrap gap-2">
-        {(["Toate", ...projectFilters] as const).map((filter) => (
+        {(["all", ...projectFilterKeys] as const).map((filter) => (
           <button
             key={filter}
             type="button"
@@ -32,7 +43,7 @@ export default function ProjectsGrid() {
                 : "border-line text-ink-soft hover:border-ink/40 hover:text-ink"
             }`}
           >
-            {filter}
+            {dict.filters[filter]}
           </button>
         ))}
       </div>
@@ -54,7 +65,7 @@ export default function ProjectsGrid() {
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={projectsDict[project.slug].title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
@@ -63,10 +74,10 @@ export default function ProjectsGrid() {
 
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">
-                  {project.category}
+                  {projectsDict[project.slug].category}
                 </p>
                 <h3 className="mt-2 text-xl font-medium tracking-tight text-white">
-                  {project.title}
+                  {projectsDict[project.slug].title}
                 </h3>
                 <p className="mt-1 text-sm text-white/60">
                   {project.location} — {project.year}
@@ -78,9 +89,7 @@ export default function ProjectsGrid() {
       </motion.div>
 
       {filtered.length === 0 && (
-        <p className="mt-16 text-center text-ink-soft">
-          Nu avem încă proiecte în această categorie.
-        </p>
+        <p className="mt-16 text-center text-ink-soft">{dict.empty}</p>
       )}
     </div>
   );

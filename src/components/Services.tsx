@@ -7,16 +7,17 @@ import {
   Armchair,
   Compass,
 } from "@phosphor-icons/react/dist/ssr";
-import { services } from "@/lib/data";
+import { servicesMeta } from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 import IconCardGrid from "./IconCardGrid";
 
 const icons = { Buildings, PaintRoller, Armchair, Compass };
 
-export default function Services() {
-  const items = services.map((service) => ({
+export default function Services({ dict }: { dict: Dictionary["services"] }) {
+  const items = servicesMeta.map((service) => ({
     icon: icons[service.icon as keyof typeof icons],
-    title: service.title,
-    copy: service.copy,
+    title: dict.items[service.key].title,
+    copy: dict.items[service.key].copy,
   }));
 
   return (
@@ -30,7 +31,7 @@ export default function Services() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium tracking-tight text-ink"
           >
-            Ce construim
+            {dict.heading}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -39,8 +40,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-sm text-ink-soft"
           >
-            Patru servicii, o singură echipă — de la primul plan până la
-            ultimul strat de vopsea.
+            {dict.subtitle}
           </motion.p>
         </div>
 

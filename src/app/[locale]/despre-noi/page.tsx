@@ -1,45 +1,54 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { stats } from "@/lib/data";
+import { notFound } from "next/navigation";
 import ValuesGrid from "@/components/ValuesGrid";
 import DepartmentsGrid from "@/components/DepartmentsGrid";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import CtaBanner from "@/components/CtaBanner";
 import AnimatedSection from "@/components/AnimatedSection";
+import { hasLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Despre noi — Ligne Verticale",
-  description:
-    "Povestea, valorile și echipa din spatele Ligne Verticale — construcții și renovări cu precizie arhitecturală.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(locale)) return {};
+  const dict = await getDictionary(locale);
+  return dict.meta.about;
+}
 
-export default function DespreNoiPage() {
+export default async function DespreNoiPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(locale)) notFound();
+  const dict = await getDictionary(locale);
+  const { about, stats } = dict;
+
   return (
     <>
       <section className="px-4 pb-16 pt-32 sm:px-6 sm:pt-40 lg:px-10">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <AnimatedSection>
             <p className="text-xs font-medium uppercase tracking-[0.28em] text-accent">
-              Despre noi
+              {about.hero.eyebrow}
             </p>
             <h1 className="mt-5 text-[clamp(2rem,4.5vw,3.25rem)] font-medium leading-[1.1] tracking-tight text-ink">
-              Construim de peste 15 ani, cu aceeași obsesie pentru detaliu.
+              {about.hero.heading}
             </h1>
-            <p className="mt-6 max-w-lg text-ink-soft">
-              Ligne Verticale a pornit de la o echipă mică de ingineri și
-              arhitecți care credeau că un șantier bine condus se vede în
-              fiecare linie a clădirii finite. Astăzi coordonăm proiecte
-              rezidențiale și comerciale în toată țara, păstrând aceeași
-              atenție pentru detaliu de la prima schiță până la ultima cheie
-              predată.
-            </p>
+            <p className="mt-6 max-w-lg text-ink-soft">{about.hero.subtitle}</p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
                 src="/images/project-facade-wood.jpg"
-                alt="Detaliu de fațadă îmbrăcată în lemn, proiect Ligne Verticale"
+                alt="Timber-clad façade detail, Ligne Verticale project"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -68,15 +77,12 @@ export default function DespreNoiPage() {
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="max-w-2xl">
             <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium tracking-tight text-ink">
-              Ce ne ghidează pe șantier
+              {about.values.heading}
             </h2>
-            <p className="mt-4 text-ink-soft">
-              Patru principii pe care nu le negociem, indiferent de mărimea
-              proiectului.
-            </p>
+            <p className="mt-4 text-ink-soft">{about.values.subtitle}</p>
           </AnimatedSection>
           <div className="mt-14">
-            <ValuesGrid />
+            <ValuesGrid dict={about.values.items} />
           </div>
         </div>
       </section>
@@ -85,15 +91,12 @@ export default function DespreNoiPage() {
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="max-w-2xl">
             <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium tracking-tight text-ink">
-              Cum lucrăm
+              {about.process.heading}
             </h2>
-            <p className="mt-4 text-ink-soft">
-              Patru etape, un singur responsabil de proiect de la primul
-              telefon până la recepția finală.
-            </p>
+            <p className="mt-4 text-ink-soft">{about.process.subtitle}</p>
           </AnimatedSection>
           <div className="mt-16">
-            <ProcessTimeline />
+            <ProcessTimeline dict={about.process.steps} />
           </div>
         </div>
       </section>
@@ -102,20 +105,17 @@ export default function DespreNoiPage() {
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="max-w-2xl">
             <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-medium tracking-tight text-ink">
-              Echipa din spatele fiecărui șantier
+              {about.departments.heading}
             </h2>
-            <p className="mt-4 text-ink-soft">
-              Patru departamente care lucrează sincronizat, pentru ca niciun
-              detaliu să nu rămână la voia întâmplării.
-            </p>
+            <p className="mt-4 text-ink-soft">{about.departments.subtitle}</p>
           </AnimatedSection>
           <div className="mt-14">
-            <DepartmentsGrid />
+            <DepartmentsGrid dict={about.departments.items} />
           </div>
         </div>
       </section>
 
-      <CtaBanner />
+      <CtaBanner locale={locale} dict={dict.cta} />
     </>
   );
 }
