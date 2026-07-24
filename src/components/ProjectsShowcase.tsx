@@ -140,10 +140,10 @@ export default function ProjectsShowcase({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
                 <div className="absolute left-4 right-16 top-4 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-red-200/70 bg-red-50/95 px-3 py-1 text-xs font-medium text-red-700 backdrop-blur-sm">
+                  <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
                     {cardDict.beforeLabel}: {project.priceBefore}
                   </span>
-                  <span className="rounded-full border border-emerald-200/70 bg-emerald-50/95 px-3 py-1 text-xs font-medium text-emerald-700 backdrop-blur-sm">
+                  <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
                     {cardDict.afterLabel}: {project.priceAfter}
                   </span>
                 </div>
@@ -159,9 +159,7 @@ export default function ProjectsShowcase({
                   <h3 className="mt-2 text-xl font-medium tracking-tight text-white">
                     {projectsDict[project.slug].title}
                   </h3>
-                  <p className="mt-1 text-sm text-white/60">
-                    {project.location} — {project.year}
-                  </p>
+                  <p className="mt-1 text-sm text-white/60">{project.year}</p>
                   <p className="mt-1 text-xs text-white/50">
                     {cardDict.durationLabel}: {projectsDict[project.slug].duration}
                   </p>
