@@ -1,51 +1,68 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { PaperPlaneTilt, CheckCircle } from "@phosphor-icons/react/dist/ssr";
-import { contactInfo } from "@/lib/data";
+import {
+  PaperPlaneTilt,
+  CheckCircle,
+  WarningCircle,
+} from "@phosphor-icons/react/dist/ssr";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 const inputClass =
   "w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink placeholder:text-ink-soft/50 outline-none transition-colors focus:border-accent";
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm({
   dict,
 }: {
   dict: Dictionary["contactPage"]["form"];
 }) {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
-    const phone = String(data.get("phone") ?? "");
-    const projectType = String(data.get("projectType") ?? "");
-    const message = String(data.get("message") ?? "");
 
-    const body = [
-      `${dict.name.replace(" *", "")}: ${name}`,
-      `${dict.email.replace(" *", "")}: ${email}`,
-      phone && `${dict.phone}: ${phone}`,
-      `${dict.projectType}: ${projectType}`,
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    setStatus("sending");
 
-    const mailto = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
-      `${name || "Ligne Verticale"}`
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          projectType: data.get("projectType"),
+          message: data.get("message"),
+          company: data.get("company"),
+        }),
+      });
 
-    window.location.href = mailto;
-    setSent(true);
+      if (!response.ok) throw new Error("request_failed");
+
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   };
+
+  const sending = status === "sending";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
           <span className="text-sm font-medium text-ink">{dict.name}</span>
@@ -111,9 +128,10 @@ export default function ContactForm({
       <div className="flex flex-wrap items-center gap-4">
         <button
           type="submit"
-          className="group inline-flex items-center gap-2 rounded-full bg-ink py-3 pl-5 pr-3 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03]"
+          disabled={sending}
+          className="group inline-flex items-center gap-2 rounded-full bg-ink py-3 pl-5 pr-3 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03] disabled:opacity-60 disabled:hover:scale-100"
         >
-          {dict.submit}
+          {sending ? dict.sending : dict.submit}
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-white transition-transform duration-300 group-hover:rotate-6">
             <PaperPlaneTilt size={14} weight="bold" />
           </span>
@@ -121,10 +139,16 @@ export default function ContactForm({
         <p className="text-xs text-ink-soft">{dict.note}</p>
       </div>
 
-      {sent && (
+      {status === "success" && (
         <p className="flex items-center gap-2 text-sm text-accent">
           <CheckCircle size={16} weight="fill" />
           {dict.success}
+        </p>
+      )}
+      {status === "error" && (
+        <p className="flex items-center gap-2 text-sm text-red-600">
+          <WarningCircle size={16} weight="fill" />
+          {dict.error}
         </p>
       )}
     </form>

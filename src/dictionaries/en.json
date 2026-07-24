@@ -212,8 +212,10 @@
       "phonePlaceholder": "+40 7xx xxx xxx",
       "messagePlaceholder": "Tell us a few words about the site, budget and timeline you have in mind.",
       "submit": "Send message",
-      "note": "This opens your email app with the message pre-filled.",
-      "success": "Your email app has opened in a new window — press “Send” there to reach us.",
+      "sending": "Sending...",
+      "note": "Your details are only used to reply to your request.",
+      "success": "Thank you! Your message has been sent — we'll get back to you within 48 hours.",
+      "error": "Something went wrong while sending. Please try again or email us directly.",
       "projectTypes": ["New construction", "Renovation", "Interior design", "Other"]
     },
     "hours": {

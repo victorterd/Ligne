@@ -212,8 +212,10 @@
       "phonePlaceholder": "07xx xxx xxx",
       "messagePlaceholder": "Spune-ne câteva cuvinte despre teren, buget și termenul dorit.",
       "submit": "Trimite mesajul",
-      "note": "Se deschide aplicația ta de email, cu mesajul precompletat.",
-      "success": "Aplicația de email s-a deschis într-o filă nouă — apasă „Trimite” acolo pentru a ne contacta.",
+      "sending": "Se trimite...",
+      "note": "Datele tale sunt folosite doar pentru a răspunde solicitării.",
+      "success": "Mulțumim! Mesajul tău a fost trimis — revenim în cel mult 48 de ore.",
+      "error": "A apărut o eroare la trimitere. Te rugăm să încerci din nou sau să ne scrii direct pe email.",
       "projectTypes": ["Construcție nouă", "Renovare", "Amenajare interioară", "Altele"]
     },
     "hours": {

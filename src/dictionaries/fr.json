@@ -212,8 +212,10 @@
       "phonePlaceholder": "06 xx xx xx xx",
       "messagePlaceholder": "Dites-nous quelques mots sur le terrain, le budget et le délai souhaité.",
       "submit": "Envoyer le message",
-      "note": "Ceci ouvre votre application email, avec le message pré-rempli.",
-      "success": "Votre application email s'est ouverte dans un nouvel onglet — cliquez sur « Envoyer » pour nous contacter.",
+      "sending": "Envoi en cours...",
+      "note": "Vos informations ne servent qu'à répondre à votre demande.",
+      "success": "Merci ! Votre message a été envoyé — nous revenons vers vous sous 48 heures.",
+      "error": "Une erreur s'est produite lors de l'envoi. Réessayez ou écrivez-nous directement par email.",
       "projectTypes": ["Construction neuve", "Rénovation", "Aménagement intérieur", "Autre"]
     },
     "hours": {
