@@ -46,7 +46,11 @@ export type ProjectSlug =
   | "living-cu-accente-de-cupru"
   | "fatada-imbracata-in-lemn"
   | "bucatarie-cu-blat-din-marmura"
-  | "casa-cu-gradina-interioara";
+  | "casa-cu-gradina-interioara"
+  | "sauna-cu-lumini-led"
+  | "spa-cu-jacuzzi-panoramic"
+  | "vila-cu-curte-si-portic"
+  | "baie-cu-oglinda-rotunda";
 
 export type ProjectMeta = {
   slug: ProjectSlug;
@@ -112,6 +116,42 @@ export const projectsMeta: ProjectMeta[] = [
     priceBefore: "19.500 €",
     priceAfter: "27.000 €",
     image: "/images/project-house-garden.jpg",
+  },
+  {
+    slug: "sauna-cu-lumini-led",
+    type: "interiorDesign",
+    location: "Cluj-Napoca",
+    year: "2025",
+    priceBefore: "4.800 €",
+    priceAfter: "9.200 €",
+    image: "/images/project-sauna.jpg",
+  },
+  {
+    slug: "spa-cu-jacuzzi-panoramic",
+    type: "exteriorDesign",
+    location: "Brașov",
+    year: "2025",
+    priceBefore: "22.000 €",
+    priceAfter: "34.500 €",
+    image: "/images/project-spa-jacuzzi.jpg",
+  },
+  {
+    slug: "vila-cu-curte-si-portic",
+    type: "construction",
+    location: "București",
+    year: "2025",
+    priceBefore: "168.000 €",
+    priceAfter: "215.000 €",
+    image: "/images/project-villa-courtyard.jpg",
+  },
+  {
+    slug: "baie-cu-oglinda-rotunda",
+    type: "renovation",
+    location: "Timișoara",
+    year: "2025",
+    priceBefore: "5.600 €",
+    priceAfter: "8.900 €",
+    image: "/images/project-bathroom.jpg",
   },
 ];
 

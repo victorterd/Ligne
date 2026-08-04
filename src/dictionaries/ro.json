@@ -131,6 +131,26 @@
       "title": "Casă cu grădină interioară",
       "category": "Amenajare exterioară",
       "duration": "6 luni"
+    },
+    "sauna-cu-lumini-led": {
+      "title": "Saună privată cu lumini LED",
+      "category": "Amenajare interioară",
+      "duration": "3 săptămâni"
+    },
+    "spa-cu-jacuzzi-panoramic": {
+      "title": "Spa interior cu jacuzzi panoramic",
+      "category": "Amenajare exterioară",
+      "duration": "2 luni"
+    },
+    "vila-cu-curte-si-portic": {
+      "title": "Vilă cu curte interioară și portic",
+      "category": "Construcție rezidențială",
+      "duration": "10 luni"
+    },
+    "baie-cu-oglinda-rotunda": {
+      "title": "Baie cu oglindă rotundă retroiluminată",
+      "category": "Renovare interioară",
+      "duration": "2 săptămâni"
     }
   },
   "projectCard": {

@@ -131,6 +131,26 @@
       "title": "Maison avec jardin intérieur",
       "category": "Aménagement extérieur",
       "duration": "6 mois"
+    },
+    "sauna-cu-lumini-led": {
+      "title": "Sauna privé à éclairage LED",
+      "category": "Aménagement intérieur",
+      "duration": "3 semaines"
+    },
+    "spa-cu-jacuzzi-panoramic": {
+      "title": "Spa intérieur avec jacuzzi panoramique",
+      "category": "Aménagement extérieur",
+      "duration": "2 mois"
+    },
+    "vila-cu-curte-si-portic": {
+      "title": "Villa avec cour intérieure et portique",
+      "category": "Construction résidentielle",
+      "duration": "10 mois"
+    },
+    "baie-cu-oglinda-rotunda": {
+      "title": "Salle de bain avec miroir rond rétroéclairé",
+      "category": "Rénovation intérieure",
+      "duration": "2 semaines"
     }
   },
   "projectCard": {

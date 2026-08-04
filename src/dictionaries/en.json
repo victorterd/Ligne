@@ -131,6 +131,26 @@
       "title": "House with an inner garden",
       "category": "Outdoor design",
       "duration": "6 months"
+    },
+    "sauna-cu-lumini-led": {
+      "title": "Private sauna with LED lighting",
+      "category": "Interior design",
+      "duration": "3 weeks"
+    },
+    "spa-cu-jacuzzi-panoramic": {
+      "title": "Indoor spa with panoramic jacuzzi",
+      "category": "Outdoor design",
+      "duration": "2 months"
+    },
+    "vila-cu-curte-si-portic": {
+      "title": "Villa with inner courtyard and portico",
+      "category": "Residential construction",
+      "duration": "10 months"
+    },
+    "baie-cu-oglinda-rotunda": {
+      "title": "Bathroom with backlit round mirror",
+      "category": "Interior renovation",
+      "duration": "2 weeks"
     }
   },
   "projectCard": {
