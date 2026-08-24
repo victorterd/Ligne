@@ -96,8 +96,6 @@ export const projectsMeta: ProjectMeta[] = [
     type: "construction",
     location: "Brașov",
     year: "2024",
-    priceBefore: "31.000 €",
-    priceAfter: "42.000 €",
     image: "/images/project-facade-wood.jpg",
   },
   {
@@ -112,8 +110,6 @@ export const projectsMeta: ProjectMeta[] = [
     type: "exteriorDesign",
     location: "Cluj-Napoca",
     year: "2023",
-    priceBefore: "19.500 €",
-    priceAfter: "27.000 €",
     image: "/images/project-house-garden.jpg",
   },
   {

@@ -46,10 +46,9 @@
     "scroll": "Derulează"
   },
   "stats": [
-    { "value": "120+", "label": "Proiecte finalizate" },
-    { "value": "15 ani", "label": "Experiență pe șantier" },
-    { "value": "40+", "label": "Specialiști în echipă" },
-    { "value": "98%", "label": "Clienți mulțumiți" }
+    { "value": "353", "label": "Proiecte finalizate" },
+    { "value": "27 ani", "label": "Experiență pe șantier" },
+    { "value": "17", "label": "Specialiști în echipă" }
   ],
   "intro": {
     "headingMain": "Numele nostru vine de la o singură idee: o linie verticală bine trasată ține în picioare toată clădirea.",
@@ -115,7 +114,7 @@
     "fatada-imbracata-in-lemn": {
       "title": "Fațadă îmbrăcată în lemn",
       "category": "Construcție rezidențială",
-      "duration": "5 luni"
+      "duration": "11 luni"
     },
     "bucatarie-cu-blat-din-marmura": {
       "title": "Bucătărie cu blat din marmură",
