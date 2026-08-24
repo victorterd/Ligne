@@ -74,14 +74,20 @@ export default function ProjectsGrid({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-              <div className="absolute left-4 right-4 top-4 flex flex-wrap gap-2">
-                <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
-                  {cardDict.beforeLabel}: {project.priceBefore}
-                </span>
-                <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
-                  {cardDict.afterLabel}: {project.priceAfter}
-                </span>
-              </div>
+              {(project.priceBefore || project.priceAfter) && (
+                <div className="absolute left-4 right-4 top-4 flex flex-wrap gap-2">
+                  {project.priceBefore && (
+                    <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
+                      {cardDict.beforeLabel}: {project.priceBefore}
+                    </span>
+                  )}
+                  {project.priceAfter && (
+                    <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
+                      {cardDict.afterLabel}: {project.priceAfter}
+                    </span>
+                  )}
+                </div>
+              )}
 
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">

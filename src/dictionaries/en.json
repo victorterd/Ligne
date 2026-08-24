@@ -112,11 +112,6 @@
       "category": "Interior renovation",
       "duration": "3 weeks"
     },
-    "living-cu-accente-de-cupru": {
-      "title": "Living room with copper accents",
-      "category": "Interior design",
-      "duration": "2 weeks"
-    },
     "fatada-imbracata-in-lemn": {
       "title": "Timber-clad façade",
       "category": "Residential construction",
@@ -131,11 +126,6 @@
       "title": "House with an inner garden",
       "category": "Outdoor design",
       "duration": "6 months"
-    },
-    "sauna-cu-lumini-led": {
-      "title": "Private sauna with LED lighting",
-      "category": "Interior design",
-      "duration": "3 weeks"
     },
     "spa-cu-jacuzzi-panoramic": {
       "title": "Indoor spa with panoramic jacuzzi",

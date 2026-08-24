@@ -43,11 +43,9 @@ export const projectFilterKeys: ProjectFilterKey[] = [
 export type ProjectSlug =
   | "vila-cu-terasa-suspendata"
   | "bucatarie-in-tonuri-de-negru"
-  | "living-cu-accente-de-cupru"
   | "fatada-imbracata-in-lemn"
   | "bucatarie-cu-blat-din-marmura"
   | "casa-cu-gradina-interioara"
-  | "sauna-cu-lumini-led"
   | "spa-cu-jacuzzi-panoramic"
   | "vila-cu-curte-si-portic"
   | "baie-cu-oglinda-rotunda";
@@ -57,30 +55,12 @@ export type ProjectMeta = {
   type: ProjectFilterKey;
   location: string;
   year: string;
-  priceBefore: string;
-  priceAfter: string;
+  priceBefore?: string;
+  priceAfter?: string;
   image: string;
 };
 
 export const projectsMeta: ProjectMeta[] = [
-  {
-    slug: "sauna-cu-lumini-led",
-    type: "interiorDesign",
-    location: "Cluj-Napoca",
-    year: "2025",
-    priceBefore: "4.800 €",
-    priceAfter: "9.200 €",
-    image: "/images/project-sauna.jpg",
-  },
-  {
-    slug: "spa-cu-jacuzzi-panoramic",
-    type: "exteriorDesign",
-    location: "Brașov",
-    year: "2025",
-    priceBefore: "22.000 €",
-    priceAfter: "34.500 €",
-    image: "/images/project-spa-jacuzzi.jpg",
-  },
   {
     slug: "vila-cu-curte-si-portic",
     type: "construction",
@@ -95,8 +75,6 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "Timișoara",
     year: "2025",
-    priceBefore: "5.600 €",
-    priceAfter: "8.900 €",
     image: "/images/project-bathroom.jpg",
   },
   {
@@ -104,8 +82,6 @@ export const projectsMeta: ProjectMeta[] = [
     type: "construction",
     location: "Cluj-Napoca",
     year: "2025",
-    priceBefore: "142.000 €",
-    priceAfter: "185.000 €",
     image: "/images/hero-villa.jpg",
   },
   {
@@ -113,18 +89,7 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "București",
     year: "2025",
-    priceBefore: "8.200 €",
-    priceAfter: "12.500 €",
     image: "/images/project-kitchen-dark.jpg",
-  },
-  {
-    slug: "living-cu-accente-de-cupru",
-    type: "interiorDesign",
-    location: "Timișoara",
-    year: "2024",
-    priceBefore: "6.500 €",
-    priceAfter: "9.800 €",
-    image: "/images/project-living-room.jpg",
   },
   {
     slug: "fatada-imbracata-in-lemn",
@@ -140,8 +105,6 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "Iași",
     year: "2024",
-    priceBefore: "10.400 €",
-    priceAfter: "15.200 €",
     image: "/images/project-kitchen-marble.jpg",
   },
   {
@@ -152,6 +115,13 @@ export const projectsMeta: ProjectMeta[] = [
     priceBefore: "19.500 €",
     priceAfter: "27.000 €",
     image: "/images/project-house-garden.jpg",
+  },
+  {
+    slug: "spa-cu-jacuzzi-panoramic",
+    type: "exteriorDesign",
+    location: "Brașov",
+    year: "2025",
+    image: "/images/project-spa-jacuzzi.jpg",
   },
 ];
 

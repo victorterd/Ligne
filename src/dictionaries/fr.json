@@ -112,11 +112,6 @@
       "category": "Rénovation intérieure",
       "duration": "3 semaines"
     },
-    "living-cu-accente-de-cupru": {
-      "title": "Salon aux accents cuivrés",
-      "category": "Aménagement intérieur",
-      "duration": "2 semaines"
-    },
     "fatada-imbracata-in-lemn": {
       "title": "Façade habillée de bois",
       "category": "Construction résidentielle",
@@ -131,11 +126,6 @@
       "title": "Maison avec jardin intérieur",
       "category": "Aménagement extérieur",
       "duration": "6 mois"
-    },
-    "sauna-cu-lumini-led": {
-      "title": "Sauna privé à éclairage LED",
-      "category": "Aménagement intérieur",
-      "duration": "3 semaines"
     },
     "spa-cu-jacuzzi-panoramic": {
       "title": "Spa intérieur avec jacuzzi panoramique",

@@ -188,14 +188,20 @@ export default function ProjectsShowcase({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-                <div className="absolute left-4 right-16 top-4 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
-                    {cardDict.beforeLabel}: {project.priceBefore}
-                  </span>
-                  <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
-                    {cardDict.afterLabel}: {project.priceAfter}
-                  </span>
-                </div>
+                {(project.priceBefore || project.priceAfter) && (
+                  <div className="absolute left-4 right-16 top-4 flex flex-wrap gap-2">
+                    {project.priceBefore && (
+                      <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
+                        {cardDict.beforeLabel}: {project.priceBefore}
+                      </span>
+                    )}
+                    {project.priceAfter && (
+                      <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
+                        {cardDict.afterLabel}: {project.priceAfter}
+                      </span>
+                    )}
+                  </div>
+                )}
 
                 <span className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
                   <ArrowUpRight size={16} />
