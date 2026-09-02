@@ -101,6 +101,11 @@
     "empty": "We don't have any projects in this category yet."
   },
   "projects": {
+    "cabana-a-frame-cu-piscina": {
+      "title": "A-frame cabin with pool",
+      "category": "Residential renovation",
+      "duration": "7 months"
+    },
     "vila-cu-terasa-suspendata": {
       "title": "Villa with a suspended terrace",
       "category": "Residential construction",
@@ -145,6 +150,7 @@
   "projectCard": {
     "beforeLabel": "Before",
     "afterLabel": "After renovation",
+    "renovationLabel": "Renovation cost",
     "durationLabel": "Duration"
   },
   "cta": {

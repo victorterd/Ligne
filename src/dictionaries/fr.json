@@ -101,6 +101,11 @@
     "empty": "Nous n'avons pas encore de projet dans cette catégorie."
   },
   "projects": {
+    "cabana-a-frame-cu-piscina": {
+      "title": "Chalet type A-frame avec piscine",
+      "category": "Rénovation résidentielle",
+      "duration": "7 mois"
+    },
     "vila-cu-terasa-suspendata": {
       "title": "Villa à terrasse suspendue",
       "category": "Construction résidentielle",
@@ -145,6 +150,7 @@
   "projectCard": {
     "beforeLabel": "Avant",
     "afterLabel": "Après rénovation",
+    "renovationLabel": "Coût rénovation",
     "durationLabel": "Durée"
   },
   "cta": {

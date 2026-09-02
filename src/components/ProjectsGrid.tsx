@@ -70,11 +70,22 @@ export default function ProjectsGrid({
                 alt={projectsDict[project.slug].title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                className={`object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-[1.06] ${
+                  project.hoverImage ? "group-hover:opacity-0" : ""
+                }`}
               />
+              {project.hoverImage && (
+                <Image
+                  src={project.hoverImage}
+                  alt={projectsDict[project.slug].title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-              {(project.priceBefore || project.priceAfter) && (
+              {(project.priceBefore || project.priceAfter || project.priceRenovation) && (
                 <div className="absolute left-4 right-4 top-4 flex flex-wrap gap-2">
                   {project.priceBefore && (
                     <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
@@ -84,6 +95,11 @@ export default function ProjectsGrid({
                   {project.priceAfter && (
                     <span className="rounded-full border border-accent/30 bg-accent-soft/95 px-3 py-1 text-xs font-medium text-accent-ink backdrop-blur-sm">
                       {cardDict.afterLabel}: {project.priceAfter}
+                    </span>
+                  )}
+                  {project.priceRenovation && (
+                    <span className="rounded-full border border-white/30 bg-ink/80 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                      {cardDict.renovationLabel}: {project.priceRenovation}
                     </span>
                   )}
                 </div>

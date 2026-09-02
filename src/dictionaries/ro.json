@@ -101,6 +101,11 @@
     "empty": "Nu avem încă proiecte în această categorie."
   },
   "projects": {
+    "cabana-a-frame-cu-piscina": {
+      "title": "Cabană tip A-frame cu piscină",
+      "category": "Renovare rezidențială",
+      "duration": "7 luni"
+    },
     "vila-cu-terasa-suspendata": {
       "title": "Vilă cu terasă suspendată",
       "category": "Construcție rezidențială",
@@ -145,6 +150,7 @@
   "projectCard": {
     "beforeLabel": "Înainte",
     "afterLabel": "După renovare",
+    "renovationLabel": "Cost renovare",
     "durationLabel": "Durată"
   },
   "cta": {

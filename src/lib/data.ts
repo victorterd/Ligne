@@ -48,7 +48,8 @@ export type ProjectSlug =
   | "casa-cu-gradina-interioara"
   | "spa-cu-jacuzzi-panoramic"
   | "vila-cu-curte-si-portic"
-  | "baie-cu-oglinda-rotunda";
+  | "baie-cu-oglinda-rotunda"
+  | "cabana-a-frame-cu-piscina";
 
 export type ProjectMeta = {
   slug: ProjectSlug;
@@ -57,10 +58,23 @@ export type ProjectMeta = {
   year: string;
   priceBefore?: string;
   priceAfter?: string;
+  priceRenovation?: string;
   image: string;
+  hoverImage?: string;
 };
 
 export const projectsMeta: ProjectMeta[] = [
+  {
+    slug: "cabana-a-frame-cu-piscina",
+    type: "renovation",
+    location: "Brașov",
+    year: "2025",
+    priceBefore: "700.000 €",
+    priceAfter: "1.300.000 €",
+    priceRenovation: "180.000 €",
+    image: "/images/project-aframe-villa-far.jpg",
+    hoverImage: "/images/project-aframe-villa-close.jpg",
+  },
   {
     slug: "vila-cu-curte-si-portic",
     type: "construction",
