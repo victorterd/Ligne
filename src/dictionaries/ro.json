@@ -136,8 +136,8 @@
       "category": "Amenajare exterioară",
       "duration": "2 luni"
     },
-    "vila-cu-curte-si-portic": {
-      "title": "Vilă cu curte interioară și portic",
+    "vila-cu-curte-interioara": {
+      "title": "Vilă cu curte interioară",
       "category": "Construcție rezidențială",
       "duration": "10 luni"
     },
@@ -151,6 +151,7 @@
     "beforeLabel": "Înainte",
     "afterLabel": "După renovare",
     "renovationLabel": "Cost renovare",
+    "constructionLabel": "Cost construcție",
     "durationLabel": "Durată"
   },
   "cta": {

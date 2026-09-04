@@ -136,8 +136,8 @@
       "category": "Aménagement extérieur",
       "duration": "2 mois"
     },
-    "vila-cu-curte-si-portic": {
-      "title": "Villa avec cour intérieure et portique",
+    "vila-cu-curte-interioara": {
+      "title": "Villa avec cour intérieure",
       "category": "Construction résidentielle",
       "duration": "10 mois"
     },
@@ -151,6 +151,7 @@
     "beforeLabel": "Avant",
     "afterLabel": "Après rénovation",
     "renovationLabel": "Coût rénovation",
+    "constructionLabel": "Coût de construction",
     "durationLabel": "Durée"
   },
   "cta": {

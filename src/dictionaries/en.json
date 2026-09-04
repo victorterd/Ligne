@@ -136,8 +136,8 @@
       "category": "Outdoor design",
       "duration": "2 months"
     },
-    "vila-cu-curte-si-portic": {
-      "title": "Villa with inner courtyard and portico",
+    "vila-cu-curte-interioara": {
+      "title": "Villa with inner courtyard",
       "category": "Residential construction",
       "duration": "10 months"
     },
@@ -151,6 +151,7 @@
     "beforeLabel": "Before",
     "afterLabel": "After renovation",
     "renovationLabel": "Renovation cost",
+    "constructionLabel": "Construction cost",
     "durationLabel": "Duration"
   },
   "cta": {

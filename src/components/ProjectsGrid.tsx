@@ -85,7 +85,10 @@ export default function ProjectsGrid({
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-              {(project.priceBefore || project.priceAfter || project.priceRenovation) && (
+              {(project.priceBefore ||
+                project.priceAfter ||
+                project.priceRenovation ||
+                project.priceConstruction) && (
                 <div className="absolute left-4 right-4 top-4 flex flex-wrap gap-2">
                   {project.priceBefore && (
                     <span className="rounded-full border border-line/60 bg-white/90 px-3 py-1 text-xs font-medium text-ink-soft backdrop-blur-sm">
@@ -100,6 +103,11 @@ export default function ProjectsGrid({
                   {project.priceRenovation && (
                     <span className="rounded-full border border-white/30 bg-ink/80 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                       {cardDict.renovationLabel}: {project.priceRenovation}
+                    </span>
+                  )}
+                  {project.priceConstruction && (
+                    <span className="rounded-full border border-white/30 bg-ink/80 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                      {cardDict.constructionLabel}: {project.priceConstruction}
                     </span>
                   )}
                 </div>

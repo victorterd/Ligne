@@ -47,7 +47,7 @@ export type ProjectSlug =
   | "bucatarie-cu-blat-din-marmura"
   | "casa-cu-gradina-interioara"
   | "spa-cu-jacuzzi-panoramic"
-  | "vila-cu-curte-si-portic"
+  | "vila-cu-curte-interioara"
   | "baie-cu-oglinda-rotunda"
   | "cabana-a-frame-cu-piscina";
 
@@ -59,6 +59,7 @@ export type ProjectMeta = {
   priceBefore?: string;
   priceAfter?: string;
   priceRenovation?: string;
+  priceConstruction?: string;
   image: string;
   hoverImage?: string;
 };
@@ -69,19 +70,18 @@ export const projectsMeta: ProjectMeta[] = [
     type: "renovation",
     location: "Brașov",
     year: "2025",
-    priceBefore: "700.000 €",
-    priceAfter: "1.300.000 €",
-    priceRenovation: "180.000 €",
+    priceConstruction: "200.000 €",
     image: "/images/project-aframe-villa-far.jpg",
     hoverImage: "/images/project-aframe-villa-close.jpg",
   },
   {
-    slug: "vila-cu-curte-si-portic",
+    slug: "vila-cu-curte-interioara",
     type: "construction",
     location: "București",
     year: "2025",
-    priceBefore: "168.000 €",
-    priceAfter: "215.000 €",
+    priceBefore: "700.000 €",
+    priceAfter: "1.300.000 €",
+    priceRenovation: "200.000 €",
     image: "/images/project-villa-courtyard.jpg",
   },
   {
