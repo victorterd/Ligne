@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
+import { InstagramLogo, TiktokLogo } from "@phosphor-icons/react/dist/ssr";
+import { contactInfo, socialLinks } from "@/lib/data";
+
+const socialIcons = {
   InstagramLogo,
-  FacebookLogo,
-  LinkedinLogo,
-} from "@phosphor-icons/react/dist/ssr";
-import { contactInfo } from "@/lib/data";
+  TiktokLogo,
+};
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -38,25 +39,30 @@ export default function Footer({
               <Image
                 src="/logo-black.png"
                 alt="Ligne Verticale"
-                width={210}
-                height={52}
-                className="h-8 w-auto"
+                width={120}
+                height={156}
+                className="h-12 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               {dict.footer.tagline}
             </p>
             <div className="mt-6 flex items-center gap-3">
-              {[InstagramLogo, FacebookLogo, LinkedinLogo].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Social network"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const Icon = socialIcons[social.icon];
+                return (
+                  <a
+                    key={social.key}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.key}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
+                  >
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

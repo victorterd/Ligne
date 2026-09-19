@@ -66,10 +66,10 @@ export default function Navbar({
           <Image
             src={scrolled || open ? "/logo-black.png" : "/logo-white.png"}
             alt="Ligne Verticale"
-            width={210}
-            height={52}
+            width={120}
+            height={156}
             priority
-            className="h-6 w-auto sm:h-7"
+            className="h-11 w-auto sm:h-12"
           />
         </Link>
 

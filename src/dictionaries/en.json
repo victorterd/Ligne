@@ -38,9 +38,9 @@
   },
   "hero": {
     "eyebrow": "Construction & renovation",
-    "titleLine1": "Spaces designed down to",
-    "titleAccent": "the last detail",
-    "subtitle": "From structure to finish, the Ligne Verticale team carries every site through to completion — new builds, full renovations, and interior fit-outs.",
+    "titleLine1": "A reliable team for",
+    "titleAccent": "your project",
+    "subtitle": "One team to manage your project from start to finish. We handle construction, renovation and finishing works with experienced teams, organized execution and a straightforward approach.",
     "ctaPrimary": "Start your project",
     "ctaSecondary": "See our projects",
     "scroll": "Scroll"
@@ -136,8 +136,8 @@
       "category": "Outdoor design",
       "duration": "2 months"
     },
-    "vila-cu-curte-interioara": {
-      "title": "Villa with inner courtyard",
+    "vila-cu-curte": {
+      "title": "Villa with a courtyard",
       "category": "Residential construction",
       "duration": "10 months"
     },

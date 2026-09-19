@@ -37,7 +37,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
-            className="text-xs font-medium uppercase tracking-[0.28em] text-white/70"
+            className="text-base font-semibold uppercase tracking-[0.28em] text-white/70 sm:text-lg"
           >
             {hero.eyebrow}
           </motion.p>

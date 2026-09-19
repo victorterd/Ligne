@@ -7,14 +7,18 @@ import {
   MapPin,
   Clock,
   InstagramLogo,
-  FacebookLogo,
-  LinkedinLogo,
+  TiktokLogo,
 } from "@phosphor-icons/react/dist/ssr";
-import { contactInfo } from "@/lib/data";
+import { contactInfo, socialLinks } from "@/lib/data";
 import ContactForm from "@/components/ContactForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+
+const socialIcons = {
+  InstagramLogo,
+  TiktokLogo,
+};
 
 export async function generateMetadata({
   params,
@@ -117,16 +121,21 @@ export default async function ContactPage({
               </div>
 
               <div className="mt-6 flex items-center gap-3 border-t border-line pt-6">
-                {[InstagramLogo, FacebookLogo, LinkedinLogo].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    aria-label="Social network"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
-                  >
-                    <Icon size={16} />
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const Icon = socialIcons[social.icon];
+                  return (
+                    <a
+                      key={social.key}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.key}
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
+                    >
+                      <Icon size={16} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </AnimatedSection>

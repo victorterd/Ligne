@@ -47,7 +47,7 @@ export type ProjectSlug =
   | "bucatarie-cu-blat-din-marmura"
   | "casa-cu-gradina-interioara"
   | "spa-cu-jacuzzi-panoramic"
-  | "vila-cu-curte-interioara"
+  | "vila-cu-curte"
   | "baie-cu-oglinda-rotunda"
   | "cabana-a-frame-cu-piscina";
 
@@ -75,7 +75,7 @@ export const projectsMeta: ProjectMeta[] = [
     hoverImage: "/images/project-aframe-villa-close.jpg",
   },
   {
-    slug: "vila-cu-curte-interioara",
+    slug: "vila-cu-curte",
     type: "construction",
     location: "București",
     year: "2025",
@@ -138,8 +138,8 @@ export const projectsMeta: ProjectMeta[] = [
 export const projectTypeOptionCount = 4;
 
 export const contactInfo = {
-  phones: ["+40 792 887 908", "+40 723 555 500"],
-  emails: ["info@ligneverticale.com", "bouhabibfelix@gmail.com"],
+  phones: ["0726 220 000"],
+  emails: ["felixbouhabib@ligneverticale.com", "fadiabiraad@ligneverticale.com"],
   address: "București, România",
   hours: [
     { key: "weekdays", value: "09:00 – 18:00" },
@@ -147,3 +147,16 @@ export const contactInfo = {
     { key: "sunday", value: null },
   ],
 } as const;
+
+export const socialLinks = [
+  {
+    key: "instagram",
+    icon: "InstagramLogo",
+    href: "https://www.instagram.com/ligneverticale.ro?stkn=MTB1b2V1dHZ3ODg1dg%3D%3D&utm_source=qr",
+  },
+  {
+    key: "tiktok",
+    icon: "TiktokLogo",
+    href: "https://www.tiktok.com/@ligneverticale.ro?_r=1&_t=ZN-99o2bq6Qr3u",
+  },
+] as const;

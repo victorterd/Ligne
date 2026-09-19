@@ -38,9 +38,9 @@
   },
   "hero": {
     "eyebrow": "Construction & rénovation",
-    "titleLine1": "Des espaces pensés jusqu'au",
-    "titleAccent": "moindre détail",
-    "subtitle": "De la structure aux finitions, l'équipe Ligne Verticale mène chaque chantier jusqu'à son achèvement — constructions neuves, rénovations complètes et aménagements intérieurs.",
+    "titleLine1": "Une équipe fiable pour",
+    "titleAccent": "votre projet",
+    "subtitle": "Une seule équipe pour gérer votre projet du début à la fin. Nous prenons en charge la construction, la rénovation et les travaux de finition avec des équipes expérimentées, une exécution organisée et une approche directe.",
     "ctaPrimary": "Démarrer votre projet",
     "ctaSecondary": "Voir nos projets",
     "scroll": "Défiler"
@@ -136,8 +136,8 @@
       "category": "Aménagement extérieur",
       "duration": "2 mois"
     },
-    "vila-cu-curte-interioara": {
-      "title": "Villa avec cour intérieure",
+    "vila-cu-curte": {
+      "title": "Villa avec cour",
       "category": "Construction résidentielle",
       "duration": "10 mois"
     },
